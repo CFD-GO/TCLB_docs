@@ -12,6 +12,9 @@ date: "2018"
 - [W. Regulski, J. Szumbarski, Ł. Łaniewski-Wołłk, K. Gumowski, J. Skibiński, M. Wichrowski, T. Wejrzanowski, *Pressure drop in flow across ceramic foams—A numerical and experimental study*, Chemical Engineering Science](https://doi.org/10.1016/j.ces.2015.06.043)
 - [M. Dzikowski, Ł. Łaniewski-Wołłk, J. Rokicki, *Single Component Multiphase Lattice Boltzmann Method for Taylor/Bretherton Bubble Train Flow Simulations*, Communications in Computational Physics](https://doi.org/10.4208/cicp.220115.110915a)
 - [A. Fakhari, T. Mitchell, C. Leonardi, D. Bolster, *Improved locality of the phase-field lattice-Boltzmann model for immiscible fluids at high density ratios*, Phys. Rev. E](https://doi.org//10.1103/PhysRevE.96.053301)
+- [T. Mitchell, C. Leonardi, A. Fakhari, *Development of a three-dimensional phase-field lattice Boltzmann method for the study of immiscible fluids at high density ratios*, International Journal of Multiphase Flow](https://doi.org/10.1016/j.ijmultiphaseflow.2018.05.004)
+- [G. Gruszczyński, T. Mitchell, C. Leonardi, Ł. Łaniewski-Wołłk, T. Barber, *A cascaded phase-field lattice Boltzmann model for the simulation of incompressible, immiscible fluids with high density contrast*, Computers & Mathematics with Applications](https://doi.org/10.1016/j.camwa.2019.08.018)
+
 
 ## PhD Thesis:
 
@@ -37,7 +40,7 @@ date: "2018"
 ## Computing Power Grants
 
 ### PL-GRID infrastrucure (PL)
-TCLB was actively developed and extended on the infrastructure of Cyfronet, in the grants: `clb`, `clb2`, `clb3`, `clb2016`, `clb2017`, `clb2018`
+TCLB was actively developed and extended on the infrastructure of Cyfronet, in the grants: `clb`, `clb2`, `clb3`, `clb2016`, `clb2017`, `clb2018`, `clb2019`
 
 ### PAWSEY infrastructure (AU)
 TCLB was developed and tuned for the Cray architecture as part of computing power grants awarded to the team of Christopher Leonardi (UQ).
