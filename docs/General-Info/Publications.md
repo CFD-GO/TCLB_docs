@@ -8,12 +8,13 @@ date: "2018"
 
 ## Scientific Journal Publications
 
-- [Ł. Łaniewski-Wołłk, J. Rokicki, *Adjoint Lattice Boltzmann for topology optimization on multi-GPU architecture*, Computers & Mathematics with Applications](https://doi.org/10.1016/j.camwa.2015.12.043)
-- [W. Regulski, J. Szumbarski, Ł. Łaniewski-Wołłk, K. Gumowski, J. Skibiński, M. Wichrowski, T. Wejrzanowski, *Pressure drop in flow across ceramic foams—A numerical and experimental study*, Chemical Engineering Science](https://doi.org/10.1016/j.ces.2015.06.043)
-- [M. Dzikowski, Ł. Łaniewski-Wołłk, J. Rokicki, *Single Component Multiphase Lattice Boltzmann Method for Taylor/Bretherton Bubble Train Flow Simulations*, Communications in Computational Physics](https://doi.org/10.4208/cicp.220115.110915a)
-- [A. Fakhari, T. Mitchell, C. Leonardi, D. Bolster, *Improved locality of the phase-field lattice-Boltzmann model for immiscible fluids at high density ratios*, Phys. Rev. E](https://doi.org//10.1103/PhysRevE.96.053301)
-- [T. Mitchell, C. Leonardi, A. Fakhari, *Development of a three-dimensional phase-field lattice Boltzmann method for the study of immiscible fluids at high density ratios*, International Journal of Multiphase Flow](https://doi.org/10.1016/j.ijmultiphaseflow.2018.05.004)
-- [G. Gruszczyński, T. Mitchell, C. Leonardi, Ł. Łaniewski-Wołłk, T. Barber, *A cascaded phase-field lattice Boltzmann model for the simulation of incompressible, immiscible fluids with high density contrast*, Computers & Mathematics with Applications](https://doi.org/10.1016/j.camwa.2019.08.018)
+- [W. Regulski, J. Szumbarski, Ł. Łaniewski-Wołłk, K. Gumowski, J. Skibiński, M. Wichrowski, T. Wejrzanowski, *Pressure drop in flow across ceramic foams—A numerical and experimental study*, Chemical Engineering Science, 2015](https://doi.org/10.1016/j.ces.2015.06.043)
+- [Ł. Łaniewski-Wołłk, J. Rokicki, *Adjoint Lattice Boltzmann for topology optimization on multi-GPU architecture*, Computers & Mathematics with Applications, 2016](https://doi.org/10.1016/j.camwa.2015.12.043)
+- [M. Dzikowski, Ł. Łaniewski-Wołłk, J. Rokicki, *Single Component Multiphase Lattice Boltzmann Method for Taylor/Bretherton Bubble Train Flow Simulations*, Communications in Computational Physics, 2016](https://doi.org/10.4208/cicp.220115.110915a)
+- [A. Fakhari, T. Mitchell, C. Leonardi, D. Bolster, *Improved locality of the phase-field lattice-Boltzmann model for immiscible fluids at high density ratios*, Phys. Rev. E, 2017](https://doi.org//10.1103/PhysRevE.96.053301)
+- [T. Mitchell, C. Leonardi, A. Fakhari, *Development of a three-dimensional phase-field lattice Boltzmann method for the study of immiscible fluids at high density ratios*, International Journal of Multiphase Flow, 2018](https://doi.org/10.1016/j.ijmultiphaseflow.2018.05.004)
+- [M. Dzikowski, L. Jasinski, M. Dabrowski, *Depth-averaged Lattice Boltzmann and Finite Element methods for single-phase flows in fractures with obstacles*, Computers & Mathematics with Applications, 2018](https://doi.org/10.1016/j.camwa.2018.02.010)
+- [G. Gruszczyński, T. Mitchell, C. Leonardi, Ł. Łaniewski-Wołłk, T. Barber, *A cascaded phase-field lattice Boltzmann model for the simulation of incompressible, immiscible fluids with high density contrast*, Computers & Mathematics with Applications, 2019](https://doi.org/10.1016/j.camwa.2019.08.018)
 
 
 ## PhD Thesis:
