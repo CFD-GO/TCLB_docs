@@ -6,8 +6,8 @@ auto_part_WMRT_FMT_HiOrd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 445c672)/src/auto_part_WMRT_FMT_HiOrd/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 445c672)/src/auto_part_WMRT_FMT_HiOrd/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 90f53ff)/src/auto_part_WMRT_FMT_HiOrd/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 90f53ff)/src/auto_part_WMRT_FMT_HiOrd/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
