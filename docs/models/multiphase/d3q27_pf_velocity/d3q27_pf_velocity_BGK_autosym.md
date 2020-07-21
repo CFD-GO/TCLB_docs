@@ -13,8 +13,8 @@ The model currently has 3 options at compile time:
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 90f53ff)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 90f53ff)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -41,6 +41,12 @@ The model currently has 3 options at compile time:
 |`GasTotalVelocityYInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityZInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasCellsInObj`|Weight of [use in line with GasTotalVelocity to determine average velocity] in objective|
+|`LiqTotalVelocityInObj`|Weight of [use to determine avg velocity of droplets] in objective|
+|`LiqTotalVelocityXInObj`|Weight of [use to determine avg velocity of droplets] in objective|
+|`LiqTotalVelocityYInObj`|Weight of [use to determine avg velocity of droplets] in objective|
+|`LiqTotalVelocityZInObj`|Weight of [use to determine avg velocity of droplets] in objective|
+|`LiqCellsInObj`|Weight of [use in line with LiqTotalVelocity to determine average velocity] in objective|
+|`DropFrontInObj`|Weight of [Highest location of droplet] in objective|
 
 
 ### [Global Settings](Settings)
@@ -94,6 +100,7 @@ The model currently has 3 options at compile time:
 
 | Name | [Unit](Units) | Comment |
 | --- | --- | --- |
+|`DropFront`|`m`|Highest location of droplet|
 |`InterfacePosition`|`1`|trackPosition|
 |`Vfront`|`1`|velocity infront of bubble|
 |`Vback`|`1`|velocity behind bubble|
@@ -110,6 +117,11 @@ The model currently has 3 options at compile time:
 |`GasTotalVelocityY`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityZ`|`m/s`|use to determine avg velocity of bubbles|
 |`GasCells`|`1`|use in line with GasTotalVelocity to determine average velocity|
+|`LiqTotalVelocity`|`m/s`|use to determine avg velocity of droplets|
+|`LiqTotalVelocityX`|`m/s`|use to determine avg velocity of droplets|
+|`LiqTotalVelocityY`|`m/s`|use to determine avg velocity of droplets|
+|`LiqTotalVelocityZ`|`m/s`|use to determine avg velocity of droplets|
+|`LiqCells`|`1`|use in line with LiqTotalVelocity to determine average velocity|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)
@@ -237,9 +249,9 @@ The model currently has 3 options at compile time:
 
 | Name | Main procedure | Preloaded densities | Pushed fields |
 | --- | --- | --- | --- |
-|PhaseInit|Init|_none_|PhaseF|
 |WallInit|Init_wallNorm|_none_|nw_x, nw_y, nw_z|
 |calcWall|calcWallPhase|nw_x, nw_y, nw_z|PhaseF|
+|PhaseInit|Init|_none_|PhaseF|
 |BaseInit|Init_distributions|_none_|g0, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, U, V, W, PhaseF|
 |calcPhase|calcPhaseF|g0, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, U, V, W, nw_x, nw_y, nw_z|PhaseF|
 |BaseIter|Run|g0, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, U, V, W, nw_x, nw_y, nw_z|g0, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, U, V, W, nw_x, nw_y, nw_z|
