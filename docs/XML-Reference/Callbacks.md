@@ -1,17 +1,4 @@
 #  Callbacks 
-##  Init 
-
-```xml
-<Init .../>
-```
-
-Initialize lattice. Init is also always run at the end of `<Model/`> element
- 
-
-| Attribute | Comment | Value |
-| --- | --- | --- |
-| `Iterations=` |  | Value with unit (int) |
-
 ##  VTK 
 
 ```xml
