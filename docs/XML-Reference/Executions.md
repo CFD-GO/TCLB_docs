@@ -14,6 +14,22 @@ Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#
 | --- | --- | --- |
 | `Iterations=` |  | Value with unit (int) |
 
+##  RunAction 
+
+```xml
+<RunAction .../>
+```
+
+Main solution element. It runs a prescribed number of iterations.
+ 
+Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)) 
+
+
+| Attribute | Comment | Value |
+| --- | --- | --- |
+| `Iterations=` |  | Value with unit (int) |
+| `name=` | The name of the action to run | Select from: list(special = "Actions") |
+
 ##  Adjoint 
 
 ```xml
@@ -21,7 +37,7 @@ Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#
 ```
 
  
-Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)), [Executions](Executions.md) ([<code>&lt;Solve/&gt;</code>](Executions.md#solve), [<code>&lt;Adjoint/&gt;</code>](Executions.md#adjoint), [<code>&lt;Optimize/&gt;</code>](Executions.md#optimize), [<code>&lt;Threshold/&gt;</code>](Executions.md#threshold), [<code>&lt;ThresholdNow/&gt;</code>](Executions.md#thresholdnow), [<code>&lt;Repeat/&gt;</code>](Executions.md#repeat), [<code>&lt;LoadBinary/&gt;</code>](Executions.md#loadbinary), [<code>&lt;SaveBinary/&gt;</code>](Executions.md#savebinary), [<code>&lt;LoadMemoryDump/&gt;</code>](Executions.md#loadmemorydump), [<code>&lt;SaveMemoryDump/&gt;</code>](Executions.md#savememorydump), [<code>&lt;EvalIf/&gt;</code>](Executions.md#evalif)) 
+Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)), [Executions](Executions.md) ([<code>&lt;Solve/&gt;</code>](Executions.md#solve), [<code>&lt;RunAction/&gt;</code>](Executions.md#runaction), [<code>&lt;Adjoint/&gt;</code>](Executions.md#adjoint), [<code>&lt;Optimize/&gt;</code>](Executions.md#optimize), [<code>&lt;Threshold/&gt;</code>](Executions.md#threshold), [<code>&lt;ThresholdNow/&gt;</code>](Executions.md#thresholdnow), [<code>&lt;Repeat/&gt;</code>](Executions.md#repeat), [<code>&lt;Container/&gt;</code>](Executions.md#container), [<code>&lt;LoadBinary/&gt;</code>](Executions.md#loadbinary), [<code>&lt;SaveBinary/&gt;</code>](Executions.md#savebinary), [<code>&lt;LoadMemoryDump/&gt;</code>](Executions.md#loadmemorydump), [<code>&lt;SaveMemoryDump/&gt;</code>](Executions.md#savememorydump), [<code>&lt;EvalIf/&gt;</code>](Executions.md#evalif)) 
 
 
 | Attribute | Comment | Value |
@@ -35,7 +51,7 @@ Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#
 ```
 
  
-Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)), [Executions](Executions.md) ([<code>&lt;Solve/&gt;</code>](Executions.md#solve), [<code>&lt;Adjoint/&gt;</code>](Executions.md#adjoint), [<code>&lt;Optimize/&gt;</code>](Executions.md#optimize), [<code>&lt;Threshold/&gt;</code>](Executions.md#threshold), [<code>&lt;ThresholdNow/&gt;</code>](Executions.md#thresholdnow), [<code>&lt;Repeat/&gt;</code>](Executions.md#repeat), [<code>&lt;LoadBinary/&gt;</code>](Executions.md#loadbinary), [<code>&lt;SaveBinary/&gt;</code>](Executions.md#savebinary), [<code>&lt;LoadMemoryDump/&gt;</code>](Executions.md#loadmemorydump), [<code>&lt;SaveMemoryDump/&gt;</code>](Executions.md#savememorydump), [<code>&lt;EvalIf/&gt;</code>](Executions.md#evalif)) 
+Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)), [Executions](Executions.md) ([<code>&lt;Solve/&gt;</code>](Executions.md#solve), [<code>&lt;RunAction/&gt;</code>](Executions.md#runaction), [<code>&lt;Adjoint/&gt;</code>](Executions.md#adjoint), [<code>&lt;Optimize/&gt;</code>](Executions.md#optimize), [<code>&lt;Threshold/&gt;</code>](Executions.md#threshold), [<code>&lt;ThresholdNow/&gt;</code>](Executions.md#thresholdnow), [<code>&lt;Repeat/&gt;</code>](Executions.md#repeat), [<code>&lt;Container/&gt;</code>](Executions.md#container), [<code>&lt;LoadBinary/&gt;</code>](Executions.md#loadbinary), [<code>&lt;SaveBinary/&gt;</code>](Executions.md#savebinary), [<code>&lt;LoadMemoryDump/&gt;</code>](Executions.md#loadmemorydump), [<code>&lt;SaveMemoryDump/&gt;</code>](Executions.md#savememorydump), [<code>&lt;EvalIf/&gt;</code>](Executions.md#evalif)) 
 
 
 | Attribute | Comment | Value |
@@ -99,6 +115,23 @@ Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#
 | --- | --- | --- |
 | `Iterations=` |  | Value with unit (int) |
 | `Times=` | Numer of Times to repeat a segment | Numeric (int) |
+
+##  Container 
+
+```xml
+<Container>
+  <VTK Iterations="10"/>
+  <Solve Iterations="1000"/>
+</Container>
+```
+
+A simple container element 
+Possible children: [Params](Params.md) ([<code>&lt;Param/&gt;</code>](Params.md#param)) 
+
+
+| Attribute | Comment | Value |
+| --- | --- | --- |
+| `Iterations=` |  | Value with unit (int) |
 
 ##  LoadBinary 
 

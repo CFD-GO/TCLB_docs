@@ -31,7 +31,7 @@ linemark=function(...) {invisible(NULL)}
 ############# Parameters and settings ######
 
 MODEL="d3q27_viscoplastic"
-Options=list()
+Options=list(OutFlow=FALSE)
 add.include.dir("tools")
 add.include.dir("src")
 add.include.dir("models/nonnewtonian/d3q27_viscoplastic")
