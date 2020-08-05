@@ -924,6 +924,10 @@
    <uri name="urn:tclb:d2q9_pp_MCMP" uri="schema/d2q9_pp_MCMP.xsd"/> 
    <public publicId="urn:tclb:d2q9_solid" uri="schema/d2q9_solid.xsd" />
    <uri name="urn:tclb:d2q9_solid" uri="schema/d2q9_solid.xsd"/> 
+   <public publicId="urn:tclb:d3q27_kl_OutFlow" uri="schema/d3q27_kl_OutFlow.xsd" />
+   <uri name="urn:tclb:d3q27_kl_OutFlow" uri="schema/d3q27_kl_OutFlow.xsd"/> 
+   <public publicId="urn:tclb:d3q27_kl" uri="schema/d3q27_kl.xsd" />
+   <uri name="urn:tclb:d3q27_kl" uri="schema/d3q27_kl.xsd"/> 
    <public publicId="urn:tclb:d3q27_viscoplastic_OutFlow" uri="schema/d3q27_viscoplastic_OutFlow.xsd" />
    <uri name="urn:tclb:d3q27_viscoplastic_OutFlow" uri="schema/d3q27_viscoplastic_OutFlow.xsd"/> 
    <public publicId="urn:tclb:d3q27_viscoplastic" uri="schema/d3q27_viscoplastic.xsd" />
