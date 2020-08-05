@@ -6,8 +6,8 @@ d3q27_cumulant_part
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 99242e5)/src/d3q27_cumulant_part/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 99242e5)/src/d3q27_cumulant_part/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_cumulant_part/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_cumulant_part/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -34,6 +34,7 @@ d3q27_cumulant_part
 |`ForceZ`||Force force Z|
 |`Smag`||Smagorinsky coefficient for SGS modeling|
 |`Omega`||relaxation rate for 3rd order cumulants|
+|`ParticleVelocityLimit`||(local) particle velocity limit|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)

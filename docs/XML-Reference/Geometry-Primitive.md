@@ -10,6 +10,17 @@
 | Attribute | Comment | Value |
 | --- | --- | --- |
 
+##  Sphere 
+
+```xml
+<Sphere .../>
+```
+
+ 
+
+| Attribute | Comment | Value |
+| --- | --- | --- |
+
 ##  Pipe 
 
 ```xml
@@ -31,7 +42,7 @@
 
 | Attribute | Comment | Value |
 | --- | --- | --- |
-| `direction=` |  | Select from: UpperLeft, UpperRight, BottomLeft, BottomRight |
+| `direction=` |  | Select from: UpperLeft, UpperRight, LowerLeft, LowerRight |
 
 ##  STL 
 
@@ -48,4 +59,7 @@ Imports a STL file as geometrical object. The element works in two modes. In the
 | `side=` | Specifies if to fill the interior (in), exterior (out), or the surface (see description) | Select from: out, in, surface |
 | `ray_axis=` | Specifies the axis along which rays will be cast for in/out filling of STL | Select from: x, y, z |
 | `scale=` | Specifies the scale by which the STL geometry should be multiplied. If you work in physical units, this can be e.g. "1m" | Value with unit (float) |
+| `x=` | Specifies the offset by which the STL geometry should be moved | Value with unit (float) |
+| `Unknown=` | Specifies the offset by which the STL geometry should be moved | Value with unit (float) |
+| `z=` | Specifies the offset by which the STL geometry should be moved | Value with unit (float) |
 

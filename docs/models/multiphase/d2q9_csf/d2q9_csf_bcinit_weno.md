@@ -6,8 +6,8 @@ d2q9_csf_bcinit_weno
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 99242e5)/src/d2q9_csf_bcinit_weno/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 99242e5)/src/d2q9_csf_bcinit_weno/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_csf_bcinit_weno/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_csf_bcinit_weno/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
