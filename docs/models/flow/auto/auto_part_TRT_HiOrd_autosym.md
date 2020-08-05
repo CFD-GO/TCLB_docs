@@ -6,8 +6,8 @@ auto_part_TRT_HiOrd_autosym
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/auto_part_TRT_HiOrd_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/auto_part_TRT_HiOrd_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/auto_part_TRT_HiOrd_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/auto_part_TRT_HiOrd_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
