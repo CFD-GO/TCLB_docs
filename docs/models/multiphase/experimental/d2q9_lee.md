@@ -6,8 +6,8 @@ d2q9_lee
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_lee/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_lee/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_lee/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_lee/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -65,10 +65,8 @@ d2q9_lee
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|Wet, Dry|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, MovingWall, ForcedMovingWall|
+|BOUNDARY|MovingWall, ForcedMovingWall, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

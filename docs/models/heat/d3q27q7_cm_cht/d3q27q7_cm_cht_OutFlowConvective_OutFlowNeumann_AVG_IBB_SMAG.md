@@ -24,8 +24,8 @@
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -129,12 +129,11 @@
 | --- | --- |
 |ADDITIONALS|DarcySolid, Smoothing|
 |ADDITIONALS_HEAT|HeaterDirichletTemperatureEQ, HeaterDirichletTemperatureABB, HeaterSource, HeaterNeumannHeatFluxCylinder, HeaterNeumannHeatFluxEast|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, EConvective, ENeumann|
-|COLLISION|BGK, MRT, CM, CM_NONLINEAR|
-|DESIGNSPACE|DesignSpace|
+|BODY|Body|
+|BOUNDARY|EConvective, ENeumann, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
+|COLLISION|CM, CM_NONLINEAR, BGK|
 |HO_BOUNDARY_HEAT|HeaterDirichletTemperatureIABB, ThermalIBB|
 |HO_BOUNDARY_HYDRO|HydroIBB|
-|NONE|None|
 |OBJECTIVEFLUX|FluxMeasurmentZone1, FluxMeasurmentZone2|
 |OBJECTIVEFORCE|ForceMeasurmentZone|
 |SETTINGZONE|DefaultZone|

@@ -6,8 +6,8 @@ d3q27_kl
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_kl/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_kl/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_kl/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_kl/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -83,10 +83,8 @@ d3q27_kl
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|ExtendedBdy, LogP|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, PressureXP, PressureXN, PressureSinXN, PressureCosXN, PressureHBXN|
-|COLLISION|BGK, MRT, TRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|Solid, Wall, PressureXP, PressureXN, PressureSinXN, PressureCosXN, PressureHBXN|
+|COLLISION|BGK, TRT|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

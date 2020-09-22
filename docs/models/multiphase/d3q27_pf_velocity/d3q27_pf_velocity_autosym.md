@@ -13,8 +13,8 @@ The model currently has 3 options at compile time:
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_pf_velocity_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_pf_velocity_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_pf_velocity_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_pf_velocity_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -129,10 +129,8 @@ The model currently has 3 options at compile time:
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|Centerline, Smoothing, Spiketrack, Saddletrack, Bubbletrack|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, MovingWall_N, MovingWall_S, NVelocity|
+|BOUNDARY|MovingWall_N, MovingWall_S, NVelocity, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
 |SETTINGZONE|DefaultZone|
 |SYMX|SymmetryX_plus, SymmetryX_minus|
 |SYMY|SymmetryY_plus, SymmetryY_minus|

@@ -6,8 +6,8 @@ d2q9_par
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_par/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_par/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_par/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_par/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -55,10 +55,9 @@ d2q9_par
 
 | Group | Types |
 | --- | --- |
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, NVelocity, SVelocity, NSymmetry, SSymmetry|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|EPressure, WPressure, NVelocity, SVelocity, WVelocity, EVelocity, NSymmetry, SSymmetry, Solid, Wall|
+|COLLISION|MRT|
+|OBJECTIVE|Inlet, Outlet|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

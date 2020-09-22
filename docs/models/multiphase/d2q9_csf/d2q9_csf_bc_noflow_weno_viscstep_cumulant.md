@@ -6,8 +6,8 @@ d2q9_csf_bc_noflow_weno_viscstep_cumulant
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_csf_bc_noflow_weno_viscstep_cumulant/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_csf_bc_noflow_weno_viscstep_cumulant/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_csf_bc_noflow_weno_viscstep_cumulant/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_csf_bc_noflow_weno_viscstep_cumulant/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -79,10 +79,8 @@ d2q9_csf_bc_noflow_weno_viscstep_cumulant
 
 | Group | Types |
 | --- | --- |
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, NSymmetry, SSymmetry, NVelocity, SVelocity|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|NSymmetry, SSymmetry, EPressure, WPressure, EVelocity, WVelocity, NVelocity, SVelocity, Solid, Wall|
+|COLLISION|MRT|
 |OBJECTIVE|Inlet, Outlet|
 |SETTINGZONE|DefaultZone|
 

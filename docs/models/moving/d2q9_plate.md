@@ -6,8 +6,8 @@ d2q9_plate
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_plate/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9_plate/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_plate/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_plate/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -78,10 +78,8 @@ d2q9_plate
 
 | Group | Types |
 | --- | --- |
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, NVelocity, SPressure|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|NVelocity, SPressure, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
+|COLLISION|MRT|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

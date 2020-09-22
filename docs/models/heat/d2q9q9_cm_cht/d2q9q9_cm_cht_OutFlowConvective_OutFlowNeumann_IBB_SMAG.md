@@ -26,8 +26,8 @@ It is a 2d version od d3q27q27_cm_cht
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9q9_cm_cht_OutFlowConvective_OutFlowNeumann_IBB_SMAG/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d2q9q9_cm_cht_OutFlowConvective_OutFlowNeumann_IBB_SMAG/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9q9_cm_cht_OutFlowConvective_OutFlowNeumann_IBB_SMAG/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9q9_cm_cht_OutFlowConvective_OutFlowNeumann_IBB_SMAG/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -112,12 +112,11 @@ It is a 2d version od d3q27q27_cm_cht
 | --- | --- |
 |ADDITIONALS|DarcySolid, Smoothing|
 |ADDITIONALS_HEAT|HeaterDirichletTemperatureEQ, HeaterDirichletTemperatureABB, HeaterSource, HeaterNeumannHeatFluxCylinder, HeaterNeumannHeatFluxEast|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, EConvective, ENeumann|
-|COLLISION|BGK, MRT, CM, CM_HIGHER, CM_HIGHER_NONLINEAR, Cumulants|
-|DESIGNSPACE|DesignSpace|
+|BODY|Body|
+|BOUNDARY|EConvective, ENeumann, EPressure, Solid, Wall, WVelocity|
+|COLLISION|CM, CM_HIGHER, CM_HIGHER_NONLINEAR, Cumulants|
 |HO_BOUNDARY_HEAT|HeaterDirichletTemperatureIABB, ThermalIBB|
 |HO_BOUNDARY_HYDRO|HydroIBB|
-|NONE|None|
 |OBJECTIVEFLUX|FluxMeasurmentZone1, FluxMeasurmentZone2|
 |OBJECTIVEFORCE|ForceMeasurmentZone|
 |SETTINGZONE|DefaultZone|

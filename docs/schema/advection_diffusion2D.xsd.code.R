@@ -31,7 +31,7 @@ linemark=function(...) {invisible(NULL)}
 ############# Parameters and settings ######
 
 MODEL="advection_diffusion2D"
-Options=list()
+Options=list(fields=FALSE)
 add.include.dir("tools")
 add.include.dir("src")
 add.include.dir("models/PDE/advection_diffusion2D")

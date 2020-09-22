@@ -6,8 +6,8 @@ wave2D
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/wave2D/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/wave2D/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/wave2D/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/wave2D/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -40,10 +40,7 @@ wave2D
 
 | Group | Types |
 | --- | --- |
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, Dirichlet|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|Dirichlet|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

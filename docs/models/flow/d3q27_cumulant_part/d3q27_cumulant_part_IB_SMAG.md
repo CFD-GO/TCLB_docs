@@ -6,8 +6,8 @@ d3q27_cumulant_part_IB_SMAG
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_cumulant_part_IB_SMAG/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_cumulant_part_IB_SMAG/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_cumulant_part_IB_SMAG/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_cumulant_part_IB_SMAG/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -62,11 +62,9 @@ d3q27_cumulant_part_IB_SMAG
 | --- | --- |
 |ADDITIONALS|NSymmetry, SSymmetry|
 |BODY|Body|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, WVelocityTurbulent, NVelocity, SVelocity, NPressure, SPressure|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
+|BOUNDARY|WVelocityTurbulent, NVelocity, SVelocity, NPressure, SPressure, EPressure, EVelocity, Wall, WPressure, WVelocity|
+|COLLISION|MRT|
 |HO_BOUNDARY|IB|
-|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

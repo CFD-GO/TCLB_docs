@@ -6,8 +6,8 @@ d3q27_viscoplastic
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_viscoplastic/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_viscoplastic/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_viscoplastic/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_viscoplastic/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -88,10 +88,8 @@ d3q27_viscoplastic
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|XYslice1, XZslice1, YZslice1, XYslice2, XZslice2, YZslice2|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, SymmetryY, SymmetryZ, NVelocity_ZouHe, SVelocity_ZouHe, EVelocity_ZouHe, WVelocity_ZouHe, NPressure_ZouHe, SPressure_ZouHe, EPressure_ZouHe, WPressure_ZouHe|
-|COLLISION|BGK, MRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|SymmetryY, SymmetryZ, NVelocity_ZouHe, SVelocity_ZouHe, EVelocity_ZouHe, WVelocity_ZouHe, NPressure_ZouHe, SPressure_ZouHe, EPressure_ZouHe, WPressure_ZouHe, Solid, Wall|
+|COLLISION|MRT|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

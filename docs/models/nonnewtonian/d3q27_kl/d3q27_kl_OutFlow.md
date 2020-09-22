@@ -6,8 +6,8 @@ d3q27_kl_OutFlow
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_kl_OutFlow/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cac2755)/src/d3q27_kl_OutFlow/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_kl_OutFlow/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27_kl_OutFlow/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -83,10 +83,8 @@ d3q27_kl_OutFlow
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|ExtendedBdy, LogP|
-|BOUNDARY|Wall, Solid, WVelocity, WPressure, WPressureL, EPressure, EVelocity, PressureXP, PressureXN, PressureSinXN, PressureCosXN, PressureHBXN, NeumannXP, NeumannXN, NeumannYP, NeumannYN, NeumannZP, NeumannZN|
-|COLLISION|BGK, MRT, TRT|
-|DESIGNSPACE|DesignSpace|
-|NONE|None|
+|BOUNDARY|Solid, Wall, PressureXP, PressureXN, PressureSinXN, PressureCosXN, PressureHBXN, NeumannXP, NeumannXN, NeumannYP, NeumannYN, NeumannZP, NeumannZN|
+|COLLISION|BGK, TRT|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)
