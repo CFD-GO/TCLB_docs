@@ -20,7 +20,8 @@ The model currently has 3 options at compile time:
 
 | Name | Comment |
 | --- | --- |
-|`T_init`|Initial temperature field|
+|`T_init`|Initial temperature field unit=[K]|
+|`Uavg`|Average velocity of channel for 2D Poiseuille flow|
 |`PhaseField`|Initial PhaseField distribution|
 |`VelocityX`|inlet/outlet/init velocity|
 |`VelocityY`|inlet/outlet/init velocity|
@@ -38,6 +39,7 @@ The model currently has 3 options at compile time:
 |`InletFluxInObj`|Weight of [pressure loss] in objective|
 |`TotalDensityInObj`|Weight of [Mass conservation check] in objective|
 |`KineticEnergyInObj`|Weight of [Measure of kinetic energy] in objective|
+|`XLocationInObj`|Weight of [tracking of x-centroid of the gas regions in domain] in objective|
 |`GasTotalVelocityInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityXInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityYInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
@@ -55,13 +57,19 @@ The model currently has 3 options at compile time:
 
 | Name | Derived | Comment |
 | --- | --- | --- |
-|`sigma_T`||Derivative describing how surface tension changes with temp|
-|`T_ref`||Reference temperature at which sigma is set|
-|`cp_h`||specific heat for heavy phase|
-|`cp_l`||specific heat for light phase|
-|`k_h`||thermal conductivity for heavy phase|
-|`k_l`||thermal conductivity for light phase|
-|`dT`||Application of vertical temp gradient to speed up initialisation|
+|`surfPower`||Use for parabolic representation of surface tension|
+|`sigma_T`||Derivative describing how surface tension changes with temp unit=[N/m2]|
+|`sigma_TT`||Derivative describing how surface tension changes with temp unit=[N/m3]|
+|`T_ref`||Reference temperature at which sigma is set unit=[K]|
+|`cp_h`||specific heat for heavy phase unit=[J/kg/K]|
+|`cp_l`||specific heat for light phase unit=[J/kg/K]|
+|`k_h`||thermal conductivity for heavy phase unit=[W/m/K]|
+|`k_l`||thermal conductivity for light phase unit=[W/m/K]|
+|`dT`||Application of vertical temp gradient to speed up initialisation unit=[K]|
+|`dTx`||Application of horizontal temp gradient to speed up initialisation unit=[K]|
+|`stabiliser`||If not solving flow field, can adjust temperature timestep|
+|`HEIGHT`||Height of channel for 2D Poiseuille flow|
+|`developedFlow`||set greater than 0 for fully developed flow in the domain (x-direction)|
 |`Density_h`||High density|
 |`Density_l`||Low  density|
 |`PhaseField_h`||PhaseField in Liquid|
@@ -100,6 +108,7 @@ The model currently has 3 options at compile time:
 | Name | [Unit](Units) | Comment |
 | --- | --- | --- |
 |`T`|`K`|T|
+|`ST`|`N/m`|ST|
 |`Rho`|`kg/m3`|Rho|
 |`PhaseField`|`1`|PhaseField|
 |`U`|`m/s`|U|
@@ -123,6 +132,7 @@ The model currently has 3 options at compile time:
 |`InletFlux`|`1m2/s`|pressure loss|
 |`TotalDensity`|`1kg/m3`|Mass conservation check|
 |`KineticEnergy`|`J`|Measure of kinetic energy|
+|`XLocation`|`m`|tracking of x-centroid of the gas regions in domain|
 |`GasTotalVelocity`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityX`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityY`|`m/s`|use to determine avg velocity of bubbles|
@@ -139,7 +149,7 @@ The model currently has 3 options at compile time:
 
 | Group | Types |
 | --- | --- |
-|ADDITIONALS|Centerline, Smoothing, Spiketrack, Saddletrack, Bubbletrack|
+|ADDITIONALS|ConstantTemp, EAdiabatic, Centerline, Smoothing, Spiketrack, Saddletrack, Bubbletrack|
 |BOUNDARY|MovingWall_N, MovingWall_S, NVelocity, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|BGK, MRT|
 |SETTINGZONE|DefaultZone|
@@ -268,10 +278,12 @@ The model currently has 3 options at compile time:
 | Name | Main procedure | Preloaded densities | Pushed fields |
 | --- | --- | --- | --- |
 |CopyDistributions|TempCopy|_none_|g0, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, U, V, W, nw_x, nw_y, nw_z, PhaseF, Temp, Cond, SurfaceTension, RK1, RK2, RK3|
-|RK_1|TempUpdate1|U, V, W|RK1|
-|RK_2|TempUpdate2|U, V, W, RK1|RK2|
-|RK_3|TempUpdate3|U, V, W, RK1, RK2|RK3|
-|RK_4|TempUpdate4|U, V, W, RK1, RK2, RK3|Temp, SurfaceTension|
+|CopyThermal|ThermalCopy|Temp, Cond, SurfaceTension|Temp, Cond, SurfaceTension|
+|RK_1|TempUpdate1|U, V, W, Temp, Cond|RK1|
+|RK_2|TempUpdate2|U, V, W, Temp, Cond, RK1|RK2|
+|RK_3|TempUpdate3|U, V, W, Temp, Cond, RK1, RK2|RK3|
+|RK_4|TempUpdate4|U, V, W, Temp, Cond, RK1, RK2, RK3|Temp, SurfaceTension|
+|NonLocalTemp|BoundUpdate|Temp|Temp, SurfaceTension|
 |WallInit|Init_wallNorm|_none_|nw_x, nw_y, nw_z|
 |calcWall|calcWallPhase|nw_x, nw_y, nw_z|PhaseF|
 |PhaseInit|Init|_none_|PhaseF, Temp, Cond, SurfaceTension, RK1, RK2, RK3|
@@ -284,7 +296,8 @@ The model currently has 3 options at compile time:
 
 | Name | Stages |
 | --- | --- |
-|TempToSteadyState|CopyDistributions, RK_1, RK_2, RK_3, RK_4|
-|Iteration|BaseIter, calcPhase, calcWall, RK_1, RK_2, RK_3, RK_4|
+|TempToSteadyState|CopyDistributions, RK_1, RK_2, RK_3, RK_4, NonLocalTemp|
+|Iteration|BaseIter, calcPhase, calcWall, RK_1, RK_2, RK_3, RK_4, NonLocalTemp|
+|IterationConstantTemp|BaseIter, calcPhase, calcWall, CopyThermal|
 |Init|PhaseInit, WallInit, calcWall, BaseInit|
 

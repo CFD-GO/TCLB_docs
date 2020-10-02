@@ -20,6 +20,7 @@ The model currently has 3 options at compile time:
 
 | Name | Comment |
 | --- | --- |
+|`Uavg`|Average velocity of channel for 2D Poiseuille flow|
 |`PhaseField`|Initial PhaseField distribution|
 |`VelocityX`|inlet/outlet/init velocity|
 |`VelocityY`|inlet/outlet/init velocity|
@@ -36,6 +37,7 @@ The model currently has 3 options at compile time:
 |`InletFluxInObj`|Weight of [pressure loss] in objective|
 |`TotalDensityInObj`|Weight of [Mass conservation check] in objective|
 |`KineticEnergyInObj`|Weight of [Measure of kinetic energy] in objective|
+|`XLocationInObj`|Weight of [tracking of x-centroid of the gas regions in domain] in objective|
 |`GasTotalVelocityInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityXInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityYInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
@@ -53,6 +55,8 @@ The model currently has 3 options at compile time:
 
 | Name | Derived | Comment |
 | --- | --- | --- |
+|`HEIGHT`||Height of channel for 2D Poiseuille flow|
+|`developedFlow`||set greater than 0 for fully developed flow in the domain (x-direction)|
 |`Density_h`||High density|
 |`Density_l`||Low  density|
 |`PhaseField_h`||PhaseField in Liquid|
@@ -112,6 +116,7 @@ The model currently has 3 options at compile time:
 |`InletFlux`|`1m2/s`|pressure loss|
 |`TotalDensity`|`1kg/m3`|Mass conservation check|
 |`KineticEnergy`|`J`|Measure of kinetic energy|
+|`XLocation`|`m`|tracking of x-centroid of the gas regions in domain|
 |`GasTotalVelocity`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityX`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityY`|`m/s`|use to determine avg velocity of bubbles|
