@@ -6,8 +6,8 @@ advection_diffusion2D_fields
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/advection_diffusion2D_fields/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/advection_diffusion2D_fields/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/advection_diffusion2D_fields/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/advection_diffusion2D_fields/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 

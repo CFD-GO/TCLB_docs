@@ -6,8 +6,8 @@ d2q9_scmp_Kupershtokh_VirtualRhoWBC_FMT
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_scmp_Kupershtokh_VirtualRhoWBC_FMT/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_scmp_Kupershtokh_VirtualRhoWBC_FMT/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/d2q9_scmp_Kupershtokh_VirtualRhoWBC_FMT/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/d2q9_scmp_Kupershtokh_VirtualRhoWBC_FMT/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
