@@ -1,0 +1,1376 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="urn:tclb:d2q9q9_cm_cht_AVG_IBB_SMAG" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:tclb:d2q9q9_cm_cht_AVG_IBB_SMAG">
+  <xs:element name="CLBConfig">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="clbconfig">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="Units"/>
+            <xs:element ref="Geometry"/>
+            <xs:element ref="Solve"/>
+            <xs:element ref="RunAction"/>
+            <xs:element ref="Adjoint"/>
+            <xs:element ref="Optimize"/>
+            <xs:element ref="Threshold"/>
+            <xs:element ref="ThresholdNow"/>
+            <xs:element ref="Repeat"/>
+            <xs:element ref="Container"/>
+            <xs:element ref="LoadBinary"/>
+            <xs:element ref="SaveBinary"/>
+            <xs:element ref="LoadMemoryDump"/>
+            <xs:element ref="SaveMemoryDump"/>
+            <xs:element ref="EvalIf"/>
+            <xs:element ref="Init"/>
+            <xs:element ref="VTK"/>
+            <xs:element ref="HDF5"/>
+            <xs:element ref="TXT"/>
+            <xs:element ref="Catalyst"/>
+            <xs:element ref="Log"/>
+            <xs:element ref="Stop"/>
+            <xs:element ref="PID"/>
+            <xs:element ref="Sample"/>
+            <xs:element ref="Model"/>
+            <xs:element ref="Param"/>
+            <xs:element ref="Control"/>
+            <xs:element ref="SyntheticTurbulence"/>
+          </xs:choice>
+          <xs:attribute name="permissive" type="xs:boolean"/>
+          <xs:attribute name="version" type="xs:string"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Geometry">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geometry">
+          <xs:attribute name="nx" type="unit"/>
+          <xs:attribute name="ny" type="unit"/>
+          <xs:attribute name="nz" type="unit"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Init">
+    <xs:annotation>
+      <xs:documentation>Initialize lattice. Init is also always run at the end of `&lt;Model/`&gt; element
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Solve">
+    <xs:annotation>
+      <xs:documentation>Main solution element. It runs a prescribed number of iterations.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunAction">
+    <xs:annotation>
+      <xs:documentation>Main solution element. It runs a prescribed number of iterations.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="name">
+            <xs:annotation>
+              <xs:documentation>The name of the action to run</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VTK">
+    <xs:annotation>
+      <xs:documentation>Export VTK data</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="what">
+            <xs:annotation>
+              <xs:documentation>List of Quantities and Geometry Components to export.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|HO_BOUNDARY_HEAT|HO_BOUNDARY_HYDRO|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|HO_BOUNDARY_HEAT|HO_BOUNDARY_HYDRO|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL))*"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="name" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Name of the VTK file.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HDF5">
+    <xs:annotation>
+      <xs:documentation>Export HDF5 data file and Xdmf description</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="what">
+            <xs:annotation>
+              <xs:documentation>List of Quantities and Geometry Components to export.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|HO_BOUNDARY_HEAT|HO_BOUNDARY_HYDRO|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|HO_BOUNDARY_HEAT|HO_BOUNDARY_HYDRO|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL))*"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="name" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Name of the HDF5 and Xdmf file.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="compress" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Use ZLIB deflation filter to compress output</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="write_xdmf" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Write Xdmf accompaning file describing the data for visualisation</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="point_data" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Write Xdmf that described the data as Point Data and not Cell Data</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="chunk" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>HDF5 Chunk size (not supported yet)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="precision">
+            <xs:annotation>
+              <xs:documentation>Select the precision of the HDF5 data. If this doesn't match the calculation type, this can conflict with compression.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="float"/>
+                <xs:enumeration value="double"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TXT">
+    <xs:annotation>
+      <xs:documentation>Export data to TXT file</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="name" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Name of the TXT file.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="gzip" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>If to compress the TXT output</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Catalyst">
+    <xs:annotation>
+      <xs:documentation>Run Catalyst co-processor</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="export">
+            <xs:annotation>
+              <xs:documentation>Select if to provide the Catalyst co-processor with VTK Cell of Point Data</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="CellData"/>
+                <xs:enumeration value="PointData"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="script" type="xs:string" use="required">
+            <xs:annotation>
+              <xs:documentation>Catalyst co-processing Python script</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="preprocess" type="xs:boolean" default="true" use="optional">
+            <xs:annotation>
+              <xs:documentation>If active, the Python script will be modified so that the files will be placed in the output directory</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Log">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="name" type="xs:string"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Stop">
+    <xs:annotation>
+      <xs:documentation>Allows to stop the computatation if a change of some Global is small for a longer time</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="Times" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Numer of times the change have to be below the limit to stop the computation.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PID">
+    <xs:annotation>
+      <xs:documentation>PID controller. Allows to achive a specified value of an Global, with tweaking of a Setting</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="integral" use="required">
+            <xs:annotation>
+              <xs:documentation>Target value for a specified Global</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="FDrag"/>
+                <xs:enumeration value="FLift"/>
+                <xs:enumeration value="XHydroFLux"/>
+                <xs:enumeration value="YHydroFLux"/>
+                <xs:enumeration value="XHydroFLux2"/>
+                <xs:enumeration value="YHydroFLux2"/>
+                <xs:enumeration value="HeatFluxX"/>
+                <xs:enumeration value="HeatFluxY"/>
+                <xs:enumeration value="HeatFluxX2"/>
+                <xs:enumeration value="HeatFluxY2"/>
+                <xs:enumeration value="HeatSource"/>
+                <xs:enumeration value="Objective"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="control" use="required">
+            <xs:annotation>
+              <xs:documentation>The setting to control (currently only zonal settings are supported)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="GravitationX"/>
+                <xs:enumeration value="GravitationY"/>
+                <xs:enumeration value="nu"/>
+                <xs:enumeration value="GalileanCorrection"/>
+                <xs:enumeration value="nu_buffer"/>
+                <xs:enumeration value="conductivity_buffer"/>
+                <xs:enumeration value="Omegafor3rdCumulants"/>
+                <xs:enumeration value="h_stability_enhancement"/>
+                <xs:enumeration value="BoussinesqCoeff"/>
+                <xs:enumeration value="CylinderCenterX"/>
+                <xs:enumeration value="CylinderCenterY"/>
+                <xs:enumeration value="CylinderCenterX_GH"/>
+                <xs:enumeration value="CylinderCenterY_GH"/>
+                <xs:enumeration value="Smag"/>
+                <xs:enumeration value="Threshold"/>
+                <xs:enumeration value="VelocityX"/>
+                <xs:enumeration value="VelocityY"/>
+                <xs:enumeration value="Pressure"/>
+                <xs:enumeration value="InitTemperature"/>
+                <xs:enumeration value="InitHeatFlux"/>
+                <xs:enumeration value="conductivity"/>
+                <xs:enumeration value="material_density"/>
+                <xs:enumeration value="cp"/>
+                <xs:enumeration value="Sigma_GH"/>
+                <xs:enumeration value="FDragInObj"/>
+                <xs:enumeration value="FLiftInObj"/>
+                <xs:enumeration value="XHydroFLuxInObj"/>
+                <xs:enumeration value="YHydroFLuxInObj"/>
+                <xs:enumeration value="XHydroFLux2InObj"/>
+                <xs:enumeration value="YHydroFLux2InObj"/>
+                <xs:enumeration value="HeatFluxXInObj"/>
+                <xs:enumeration value="HeatFluxYInObj"/>
+                <xs:enumeration value="HeatFluxX2InObj"/>
+                <xs:enumeration value="HeatFluxY2InObj"/>
+                <xs:enumeration value="HeatSourceInObj"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="zone">
+            <xs:annotation>
+              <xs:documentation>The setting to control (currently only zonal settings are supported)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="scale" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>The proportional rate D in PID controller</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="DerivativeTime" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>The derivative time scale. D = P * DerivativeTime</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="IntegrationTime" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>The integral time scale. I = P / IntegrationTime</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sample">
+    <xs:annotation>
+      <xs:documentation>Effecient sampling of quantities on each iteration, without need for VTK</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="callback">
+          <xs:attribute name="what">
+            <xs:annotation>
+              <xs:documentation>List of Quantities to be sampled. By default all are sampled.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT))*"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Box">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geom"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sphere">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geom"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pipe">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geom"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Wedge">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geom">
+          <xs:attribute name="direction" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="UpperLeft"/>
+                <xs:enumeration value="UpperRight"/>
+                <xs:enumeration value="LowerLeft"/>
+                <xs:enumeration value="LowerRight"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="STL">
+    <xs:annotation>
+      <xs:documentation>Imports a STL file as geometrical object. The element works in two modes. In the first mode, it fills elements inside or outside of the STL geometry (casting rays along some axis). In the second mode (`side="surface"`) it fills elements touching the geometry (on both sides) and **calculates the cuts* for Interpolated-BounceBack-type conditions.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="geom">
+          <xs:attribute name="file" type="xs:string" use="required">
+            <xs:annotation>
+              <xs:documentation>STL file to import</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="side" default="in" use="optional">
+            <xs:annotation>
+              <xs:documentation>Specifies if to fill the interior (in), exterior (out), or the surface (see description)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="out"/>
+                <xs:enumeration value="in"/>
+                <xs:enumeration value="surface"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ray_axis">
+            <xs:annotation>
+              <xs:documentation>Specifies the axis along which rays will be cast for in/out filling of STL</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="x"/>
+                <xs:enumeration value="y"/>
+                <xs:enumeration value="z"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="scale" type="unit">
+            <xs:annotation>
+              <xs:documentation>Specifies the scale by which the STL geometry should be multiplied. If you work in physical units, this can be e.g. "1m"</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="x" type="unit">
+            <xs:annotation>
+              <xs:documentation>Specifies the offset by which the STL geometry should be moved</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="z" type="unit">
+            <xs:annotation>
+              <xs:documentation>Specifies the offset by which the STL geometry should be moved</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inlet">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="predefined"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Outlet">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="predefined"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Channel">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="predefined"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tunnel">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="predefined"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Param">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="params">
+          <xs:attribute name="name">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="GravitationX"/>
+                <xs:enumeration value="GravitationY"/>
+                <xs:enumeration value="nu"/>
+                <xs:enumeration value="GalileanCorrection"/>
+                <xs:enumeration value="nu_buffer"/>
+                <xs:enumeration value="conductivity_buffer"/>
+                <xs:enumeration value="Omegafor3rdCumulants"/>
+                <xs:enumeration value="h_stability_enhancement"/>
+                <xs:enumeration value="BoussinesqCoeff"/>
+                <xs:enumeration value="CylinderCenterX"/>
+                <xs:enumeration value="CylinderCenterY"/>
+                <xs:enumeration value="CylinderCenterX_GH"/>
+                <xs:enumeration value="CylinderCenterY_GH"/>
+                <xs:enumeration value="Smag"/>
+                <xs:enumeration value="Threshold"/>
+                <xs:enumeration value="VelocityX"/>
+                <xs:enumeration value="VelocityY"/>
+                <xs:enumeration value="Pressure"/>
+                <xs:enumeration value="InitTemperature"/>
+                <xs:enumeration value="InitHeatFlux"/>
+                <xs:enumeration value="conductivity"/>
+                <xs:enumeration value="material_density"/>
+                <xs:enumeration value="cp"/>
+                <xs:enumeration value="Sigma_GH"/>
+                <xs:enumeration value="FDragInObj"/>
+                <xs:enumeration value="FLiftInObj"/>
+                <xs:enumeration value="XHydroFLuxInObj"/>
+                <xs:enumeration value="YHydroFLuxInObj"/>
+                <xs:enumeration value="XHydroFLux2InObj"/>
+                <xs:enumeration value="YHydroFLux2InObj"/>
+                <xs:enumeration value="HeatFluxXInObj"/>
+                <xs:enumeration value="HeatFluxYInObj"/>
+                <xs:enumeration value="HeatFluxX2InObj"/>
+                <xs:enumeration value="HeatFluxY2InObj"/>
+                <xs:enumeration value="HeatSourceInObj"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="value" type="unit" use="required"/>
+          <xs:attribute name="gauge" type="unit"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Model">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="container">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="Param"/>
+            <xs:element ref="Control"/>
+            <xs:element ref="SyntheticTurbulence"/>
+          </xs:choice>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Units">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="units"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Adjoint">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="Solve"/>
+            <xs:element ref="RunAction"/>
+            <xs:element ref="Adjoint"/>
+            <xs:element ref="Optimize"/>
+            <xs:element ref="Threshold"/>
+            <xs:element ref="ThresholdNow"/>
+            <xs:element ref="Repeat"/>
+            <xs:element ref="Container"/>
+            <xs:element ref="LoadBinary"/>
+            <xs:element ref="SaveBinary"/>
+            <xs:element ref="LoadMemoryDump"/>
+            <xs:element ref="SaveMemoryDump"/>
+            <xs:element ref="EvalIf"/>
+          </xs:choice>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Optimize">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="Solve"/>
+            <xs:element ref="RunAction"/>
+            <xs:element ref="Adjoint"/>
+            <xs:element ref="Optimize"/>
+            <xs:element ref="Threshold"/>
+            <xs:element ref="ThresholdNow"/>
+            <xs:element ref="Repeat"/>
+            <xs:element ref="Container"/>
+            <xs:element ref="LoadBinary"/>
+            <xs:element ref="SaveBinary"/>
+            <xs:element ref="LoadMemoryDump"/>
+            <xs:element ref="SaveMemoryDump"/>
+            <xs:element ref="EvalIf"/>
+          </xs:choice>
+          <xs:attribute name="Method">
+            <xs:annotation>
+              <xs:documentation>Optimization method</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="MMA"/>
+                <xs:enumeration value="L-BFGS-B"/>
+                <xs:enumeration value="COBYLA"/>
+                <xs:enumeration value="NELDERMEAD"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="Material">
+            <xs:annotation>
+              <xs:documentation>Optional constraint on "amount of material", which is the sum of Topological parameters</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="more"/>
+                <xs:enumeration value="less"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="XAbsTolerance" type="xs:double"/>
+          <xs:attribute name="RelTolerance" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Relative Tolerance</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="AbsTolerance" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Absolute Tolerance</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="StopAtValue" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>At what value of the objective to stop</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="MaxEvaluations" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Maximal number of evalulations (optimizer iterations)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OptimalControl">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="design">
+          <xs:attribute name="what" use="required">
+            <xs:annotation>
+              <xs:documentation>Select a time-dependent setting to optimize</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OptimalControlSecond">
+    <xs:annotation>
+      <xs:documentation>Parametrises a time-dependend Setting with the value of every second iteration. Values inbetween are interpolated.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="design">
+          <xs:attribute name="what">
+            <xs:annotation>
+              <xs:documentation>Select a time-dependent setting to optimize</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="lower" type="unit">
+            <xs:annotation>
+              <xs:documentation>Lower limit on the value of the Setting</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="upper" type="unit">
+            <xs:annotation>
+              <xs:documentation>Upper limit on the value of the Setting</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fourier">
+    <xs:annotation>
+      <xs:documentation>Makes a truncated Fourier transform of a time-dependent Setting (OptimalControl)
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="design">
+          <xs:attribute name="modes">
+            <xs:annotation>
+              <xs:documentation>Number of Fourier modes to use for the parametrization</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="int"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="lower" type="unit">
+            <xs:annotation>
+              <xs:documentation>Lower limit on the Fourier coefficients</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="upper" type="unit">
+            <xs:annotation>
+              <xs:documentation>Upper limit on the Fourier coefficients</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BSpline">
+    <xs:annotation>
+      <xs:documentation>Makes B-Spline transform/smoothing of a time-dependent Setting (OptimalControl)
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="design">
+          <xs:attribute name="nodes" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Number of degrees of freedom (parameters) of the b-spline</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="periodic" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>If the b-spline should be periotic in the control period</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="lower" type="unit">
+            <xs:annotation>
+              <xs:documentation>Lower limit on the values</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="upper" type="unit">
+            <xs:annotation>
+              <xs:documentation>Upper limit on the values</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepeatControl">
+    <xs:annotation>
+      <xs:documentation>Repeats a control for optimal control
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="design">
+          <xs:attribute name="length" type="unit">
+            <xs:annotation>
+              <xs:documentation>Length of the control to repeat</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="lower" type="unit">
+            <xs:annotation>
+              <xs:documentation>Lower limit on the values</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="upper" type="unit">
+            <xs:annotation>
+              <xs:documentation>Upper limit on the values</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Threshold">
+    <xs:annotation>
+      <xs:documentation>Goes with a threshold from 0 to 1. Then for a specific threshold sets all the parameter below the threshold to 0 and above the threshold to 1. Then runs the calculation for the binary (0-1) parameter set.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="Levels" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Number of Levels to calculate between 0 and 1</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThresholdNow">
+    <xs:annotation>
+      <xs:documentation>For a specific threshold sets all the parameter below the threshold to 0 and above the threshold to 1. Then runs the calculation for the binary (0-1) parameter set.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="Level" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Threshold level to apply</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Repeat">
+    <xs:annotation>
+      <xs:documentation>A loop element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="Times" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Numer of Times to repeat a segment</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>A simple container element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Control">
+    <xs:annotation>
+      <xs:documentation>Element prescribing time-dependent Settings</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="setup">
+          <xs:attribute name="Iterations" type="unit">
+            <xs:annotation>
+              <xs:documentation>Length of the time-dependentcy</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyntheticTurbulence">
+    <xs:annotation>
+      <xs:documentation>Prescribe properties of the synthetic turbulence generated for initialization and boundary conditions</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="setup">
+          <xs:attribute name="Modes" type="xs:double">
+            <xs:annotation>
+              <xs:documentation>Number of harmonic modes to generate for the turbulence</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Spread">
+            <xs:annotation>
+              <xs:documentation>The way to divide the spectrum to a finite number of modes</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Even"/>
+                <xs:enumeration value="Log"/>
+                <xs:enumeration value="Quantile"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="Spectrum">
+            <xs:annotation>
+              <xs:documentation>Type of spectrum to use</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Von Karman"/>
+                <xs:enumeration value="One Wave"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="MainWaveLength" type="unit">
+            <xs:annotation>
+              <xs:documentation>Main wave-length in the Von Karman spectrum</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="DiffusionWaveLength" type="unit">
+            <xs:annotation>
+              <xs:documentation>Diffusion scale wave-length in the Von Karman spectrum</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="MinWaveLength" type="unit">
+            <xs:annotation>
+              <xs:documentation>Minimal space wave-length</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="MaxWaveLength" type="unit">
+            <xs:annotation>
+              <xs:documentation>Maximal space wave-length</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="TimeWaveLength" type="unit">
+            <xs:annotation>
+              <xs:documentation>Time wave-length of the syntetic turbulence (can be also `TimeWaveNumber` or `TimeWaveFrequency`)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBinary">
+    <xs:annotation>
+      <xs:documentation>Load a Field from a binary file (low level)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="file" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>path to a binary file (without the suffix)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="comp">
+            <xs:annotation>
+              <xs:documentation>Field to load from the binary file</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="f000"/>
+                <xs:enumeration value="f100"/>
+                <xs:enumeration value="f200"/>
+                <xs:enumeration value="f010"/>
+                <xs:enumeration value="f110"/>
+                <xs:enumeration value="f210"/>
+                <xs:enumeration value="f020"/>
+                <xs:enumeration value="f120"/>
+                <xs:enumeration value="f220"/>
+                <xs:enumeration value="h000"/>
+                <xs:enumeration value="h100"/>
+                <xs:enumeration value="h200"/>
+                <xs:enumeration value="h010"/>
+                <xs:enumeration value="h110"/>
+                <xs:enumeration value="h210"/>
+                <xs:enumeration value="h020"/>
+                <xs:enumeration value="h120"/>
+                <xs:enumeration value="h220"/>
+                <xs:enumeration value="U"/>
+                <xs:enumeration value="avgT"/>
+                <xs:enumeration value="avgP"/>
+                <xs:enumeration value="varUX"/>
+                <xs:enumeration value="varUY"/>
+                <xs:enumeration value="varUXUY"/>
+                <xs:enumeration value="avgdxu2"/>
+                <xs:enumeration value="avgdyv2"/>
+                <xs:enumeration value="avgUX"/>
+                <xs:enumeration value="avgUY"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBinary">
+    <xs:annotation>
+      <xs:documentation>Save a Field to a binary file (low level)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="file" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>the name of the binary file</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="filename" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>full path to the binary file</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="comp">
+            <xs:annotation>
+              <xs:documentation>Field to save to the binary file</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="f000"/>
+                <xs:enumeration value="f100"/>
+                <xs:enumeration value="f200"/>
+                <xs:enumeration value="f010"/>
+                <xs:enumeration value="f110"/>
+                <xs:enumeration value="f210"/>
+                <xs:enumeration value="f020"/>
+                <xs:enumeration value="f120"/>
+                <xs:enumeration value="f220"/>
+                <xs:enumeration value="h000"/>
+                <xs:enumeration value="h100"/>
+                <xs:enumeration value="h200"/>
+                <xs:enumeration value="h010"/>
+                <xs:enumeration value="h110"/>
+                <xs:enumeration value="h210"/>
+                <xs:enumeration value="h020"/>
+                <xs:enumeration value="h120"/>
+                <xs:enumeration value="h220"/>
+                <xs:enumeration value="U"/>
+                <xs:enumeration value="avgT"/>
+                <xs:enumeration value="avgP"/>
+                <xs:enumeration value="varUX"/>
+                <xs:enumeration value="varUY"/>
+                <xs:enumeration value="varUXUY"/>
+                <xs:enumeration value="avgdxu2"/>
+                <xs:enumeration value="avgdyv2"/>
+                <xs:enumeration value="avgUX"/>
+                <xs:enumeration value="avgUY"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMemoryDump">
+    <xs:annotation>
+      <xs:documentation>Load all fields from a dump created by Save element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="file" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>path to a binary file (without the suffix)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMemoryDump">
+    <xs:annotation>
+      <xs:documentation>Save all fields, to be loaded later on with LoadMemoryDump
+Warning: Save and Load Memory Dump have to be used on the *same number of cores*, same model and same precision.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="file" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>the name of the binary file</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="filename" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>full path to the binary file</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvalIf">
+    <xs:annotation>
+      <xs:documentation>Evaluate subactions only if opt_present build (d2qg and d2q9_bc, option is *bc* )options are present, or only if opt_missing is missing
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="action">
+          <xs:attribute name="opt_present" type="xs:string"/>
+          <xs:attribute name="opt_missing" type="xs:string"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DarcySolid">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Smoothing">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterDirichletTemperatureEQ">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterDirichletTemperatureABB">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterSource">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterNeumannHeatFluxCylinder">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterNeumannHeatFluxEast">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Body">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPressure">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Solid">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Wall">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WVelocity">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CM">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CM_HIGHER">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CM_HIGHER_NONLINEAR">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cumulants">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaterDirichletTemperatureIABB">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThermalIBB">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HydroIBB">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FluxMeasurmentZone1">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FluxMeasurmentZone2">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForceMeasurmentZone">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultZone">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="nodetypes">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="Box"/>
+      <xs:element ref="Sphere"/>
+      <xs:element ref="Pipe"/>
+      <xs:element ref="Wedge"/>
+      <xs:element ref="STL"/>
+      <xs:element ref="Inlet"/>
+      <xs:element ref="Outlet"/>
+      <xs:element ref="Channel"/>
+      <xs:element ref="Tunnel"/>
+    </xs:choice>
+    <xs:attribute name="mask">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ADDITIONALS"/>
+          <xs:enumeration value="ADDITIONALS_HEAT"/>
+          <xs:enumeration value="BODY"/>
+          <xs:enumeration value="BOUNDARY"/>
+          <xs:enumeration value="COLLISION"/>
+          <xs:enumeration value="HO_BOUNDARY_HEAT"/>
+          <xs:enumeration value="HO_BOUNDARY_HYDRO"/>
+          <xs:enumeration value="OBJECTIVEFLUX"/>
+          <xs:enumeration value="OBJECTIVEFORCE"/>
+          <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="ALL"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attributeGroup ref="geom"/>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="geom">
+    <xs:attributeGroup ref="geom"/>
+  </xs:complexType>
+  <xs:complexType name="predefined"/>
+  <xs:complexType name="bool">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="Box"/>
+      <xs:element ref="Sphere"/>
+      <xs:element ref="Pipe"/>
+      <xs:element ref="Wedge"/>
+      <xs:element ref="STL"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="action">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="Param"/>
+    </xs:choice>
+    <xs:attribute name="Iterations" type="unit" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="setup"/>
+  <xs:complexType name="callback">
+    <xs:attribute name="Iterations" type="unit"/>
+  </xs:complexType>
+  <xs:complexType name="params"/>
+  <xs:complexType name="geometry">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="DarcySolid"/>
+      <xs:element ref="Smoothing"/>
+      <xs:element ref="HeaterDirichletTemperatureEQ"/>
+      <xs:element ref="HeaterDirichletTemperatureABB"/>
+      <xs:element ref="HeaterSource"/>
+      <xs:element ref="HeaterNeumannHeatFluxCylinder"/>
+      <xs:element ref="HeaterNeumannHeatFluxEast"/>
+      <xs:element ref="Body"/>
+      <xs:element ref="EPressure"/>
+      <xs:element ref="Solid"/>
+      <xs:element ref="Wall"/>
+      <xs:element ref="WVelocity"/>
+      <xs:element ref="CM"/>
+      <xs:element ref="CM_HIGHER"/>
+      <xs:element ref="CM_HIGHER_NONLINEAR"/>
+      <xs:element ref="Cumulants"/>
+      <xs:element ref="HeaterDirichletTemperatureIABB"/>
+      <xs:element ref="ThermalIBB"/>
+      <xs:element ref="HydroIBB"/>
+      <xs:element ref="FluxMeasurmentZone1"/>
+      <xs:element ref="FluxMeasurmentZone2"/>
+      <xs:element ref="ForceMeasurmentZone"/>
+      <xs:element ref="DefaultZone"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="container">
+    <xs:attribute name="output" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="clbconfig">
+    <xs:attribute name="output" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="units">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="Param"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="design"/>
+  <xs:simpleType name="unit">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[-+]?([0-9]*[.])?[0-9]+([eE][-+]?[0-9]+)?((m|s|kg|K|x|y|z|A|t|N|Pa|J|W|V|C|nm|um|mm|cm|km|h|ns|us|ms|g|mg)[0-9]*)*(/((m|s|kg|K|x|y|z|A|t|N|Pa|J|W|V|C|nm|um|mm|cm|km|h|ns|us|ms|g|mg)[0-9]*)+)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="geom">
+    <xs:attribute name="nx" type="unit"/>
+    <xs:attribute name="dx" type="unit"/>
+    <xs:attribute name="fx" type="unit"/>
+    <xs:attribute name="ny" type="unit"/>
+    <xs:attribute name="dy" type="unit"/>
+    <xs:attribute name="fy" type="unit"/>
+    <xs:attribute name="nz" type="unit"/>
+    <xs:attribute name="dz" type="unit"/>
+    <xs:attribute name="fz" type="unit"/>
+  </xs:attributeGroup>
+</xs:schema>
+

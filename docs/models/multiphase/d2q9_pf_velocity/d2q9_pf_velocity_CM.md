@@ -41,8 +41,8 @@ Updates: 16/08/2018: Cascaded (CLBM) collision scheme is introduced for both hyd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/d2q9_pf_velocity_CM/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 321354f)/src/d2q9_pf_velocity_CM/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 756d304)/src/d2q9_pf_velocity_CM/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 756d304)/src/d2q9_pf_velocity_CM/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
