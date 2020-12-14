@@ -46,8 +46,3 @@ To deploy:
 ```
 
 More questions? Visit original documentation: http://www.mkdocs.org/
-
-#### Common issues
-
-It may be required to run: 
-$ apt-get install python3.6-dev
