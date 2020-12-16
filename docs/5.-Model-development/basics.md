@@ -7,7 +7,7 @@ output: html_document
 [//]: # (TODO: Dodać rozwiązane tutoriale, sprawdzić by działało wszystko.)
 
 
-Basic information needed to develop models will apear here. 
+Basic information needed to develop models will apear here.
 
 Every model in TCLB is defined by a subdirectory of `models`.
 The `conf.mk` file stores some additional settings for a model, but it also tells TCLB that this directory is in fact a model.
@@ -70,15 +70,17 @@ If there is -1,1 access pattern you can use a shortcut:
 AddField(name="u", dx=c(-1,1), dy=c(-1,1)) 
 # same as 
 AddField(name="u", stencil2d=1)
-``` 
-
+```
 
 2. **AddDensity** - Variables loaded from `Fields` with a predefined offset: 
-``` R
+
+```R
 AddDensity( name="Name", dx=1, dy=0, dz=0, comment='Some comment')
 ```
+
 It is possible to automate the process and add `Density` for each possible direction(here for d3q27 model):
-``` R
+
+```R
 x = c(0,1,-1);
 P = expand.grid(x=0:2,y=0:2,z=0:2)
 U = expand.grid(x,x,x)
@@ -91,6 +93,110 @@ AddDensity(
         group="f"
 )
 ```
+
+As a result, the densities will have the following offset:
+
+```R
+$ R
+
+> x = c(0,1,-1);
+> P = expand.grid(x=0:2,y=0:2,z=0:2)
+> U = expand.grid(x,x,x)
+> x
+[1]  0  1 -1
+> P
+   x y z
+1  0 0 0
+2  1 0 0
+3  2 0 0
+4  0 1 0
+5  1 1 0
+6  2 1 0
+7  0 2 0
+8  1 2 0
+9  2 2 0
+10 0 0 1
+11 1 0 1
+12 2 0 1
+13 0 1 1
+14 1 1 1
+15 2 1 1
+16 0 2 1
+17 1 2 1
+18 2 2 1
+19 0 0 2
+20 1 0 2
+21 2 0 2
+22 0 1 2
+23 1 1 2
+24 2 1 2
+25 0 2 2
+26 1 2 2
+27 2 2 2
+> U
+   Var1 Var2 Var3
+1     0    0    0
+2     1    0    0
+3    -1    0    0
+4     0    1    0
+5     1    1    0
+6    -1    1    0
+7     0   -1    0
+8     1   -1    0
+9    -1   -1    0
+10    0    0    1
+11    1    0    1
+12   -1    0    1
+13    0    1    1
+14    1    1    1
+15   -1    1    1
+16    0   -1    1
+17    1   -1    1
+18   -1   -1    1
+19    0    0   -1
+20    1    0   -1
+21   -1    0   -1
+22    0    1   -1
+23    1    1   -1
+24   -1    1   -1
+25    0   -1   -1
+26    1   -1   -1
+27   -1   -1   -1
+> 
+```
+
+Observe that:
+
+```.c
+f_100 == f_100(-1,0,0) # the value is read from the left (`x=-1` direction) <==> it is streamed to the right (`x=1` direction).
+```
+
+and
+
+```.c
+f_200 == f_200(1,0,0)  # the value is read from the right (`x=1` direction) <==> it is streamed to the left (`x=2` direction which is a convention to store the `-1` in the name of the variable).
+```
+
+Have a look at the picture below - it presents the memory layout.
+
+<center> ![](mem_layout.jpg) </center>
+
+ **AddField** vs  **AddDensity**
+
+|               | Write         | Read  |
+| ------------- |:-------------:| -----:|
+| Field         | x             | Function call |
+| Density       | x             | Node Creation (automatically) |
+
+The objects of `Node` class are created and destroyed 'on the fly' (automatically) during the streaming step.
+Notice, that to read the value of the field, it must be called explicitly:
+
+```.c
+real_t x = myField(0,0) # read myField(0,0) 
+// do stuff with x
+myField = x; // it has to be saved in myField at 0,0 for the next iteration
+```
+
 
 3. **AddGlobal** - Integrates variables and exports calculated value, useful for calculating forces/fluxes etc.
 ```R
