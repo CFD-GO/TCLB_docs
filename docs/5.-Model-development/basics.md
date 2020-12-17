@@ -212,10 +212,12 @@ AddSetting(name="Velocity", default="0m/s", comment='Inlet velocity', zonal=TRUE
 ```
 
 5. **AddQuantity** - Values that can be exported to VTK files (and Catalyst). In most cases they are macroscopic human-readable quantites like velocity, pressure, displacement etc.
+
 ``` R
 AddQuantity(name="Name", unit="unit", comment="Some comment", vector = T/F)
 AddQuantity(name="U", unit="m/s", comment="macroscopic velocity", vector = T)
 ```
+
 `vector` should be set to `T` for properties like velocity, momentum etc. 
 In order to extract those values the `GetName()` function must be defined in `Dynamics.c`.
 
@@ -229,10 +231,7 @@ In order to extract those values the `GetName()` function must be defined in `Dy
     * Inlet
     * Outlet
 
-
 File structure, what are quantities, globals, etc, whats needed in (almost) every model
-
-
 
 **Stages**
 

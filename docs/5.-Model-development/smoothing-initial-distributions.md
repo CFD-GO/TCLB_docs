@@ -1,7 +1,5 @@
 
-# Pro Tips
-
-##Smoothing initial distributions
+# Smoothing initial distributions
 
 It may happen, that initialization of a particular model with sharp interface would cause it to crash.
 To alleviate it, one can pre-run the solver to diffuse the interface for few iterations, then run the actual case.
