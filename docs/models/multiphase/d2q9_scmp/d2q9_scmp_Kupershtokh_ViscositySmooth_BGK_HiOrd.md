@@ -6,8 +6,8 @@ d2q9_scmp_Kupershtokh_ViscositySmooth_BGK_HiOrd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 756d304)/src/d2q9_scmp_Kupershtokh_ViscositySmooth_BGK_HiOrd/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 756d304)/src/d2q9_scmp_Kupershtokh_ViscositySmooth_BGK_HiOrd/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_scmp_Kupershtokh_ViscositySmooth_BGK_HiOrd/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_scmp_Kupershtokh_ViscositySmooth_BGK_HiOrd/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
