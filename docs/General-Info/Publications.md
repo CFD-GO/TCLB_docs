@@ -15,7 +15,7 @@ date: "2018"
 - [T. Mitchell, C. Leonardi, A. Fakhari, *Development of a three-dimensional phase-field lattice Boltzmann method for the study of immiscible fluids at high density ratios*, International Journal of Multiphase Flow, 2018](https://doi.org/10.1016/j.ijmultiphaseflow.2018.05.004)
 - [M. Dzikowski, L. Jasinski, M. Dabrowski, *Depth-averaged Lattice Boltzmann and Finite Element methods for single-phase flows in fractures with obstacles*, Computers & Mathematics with Applications, 2018](https://doi.org/10.1016/j.camwa.2018.02.010)
 - [G. Gruszczyński, T. Mitchell, C. Leonardi, Ł. Łaniewski-Wołłk, T. Barber, *A cascaded phase-field lattice Boltzmann model for the simulation of incompressible, immiscible fluids with high density contrast*, Computers & Mathematics with Applications, 2019](https://doi.org/10.1016/j.camwa.2019.08.018)
-
+- [M Rutkowski, W Gryglas, J Szumbarski, C Leonardi, Ł Łaniewski-Wołłk, *Open-loop optimal control of a flapping wing using an adjoint Lattice Boltzmann method*, Computers & Mathematics with Applications, 2020](https://doi.org/10.1016/j.camwa.2020.02.020)
 
 ## PhD Thesis:
 
