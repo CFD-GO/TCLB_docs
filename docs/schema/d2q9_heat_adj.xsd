@@ -273,6 +273,20 @@
                 <xs:enumeration value="Temperature"/>
                 <xs:enumeration value="HighTemperature"/>
                 <xs:enumeration value="LowTemperature"/>
+                <xs:enumeration value="omega_D"/>
+                <xs:enumeration value="nu0_D"/>
+                <xs:enumeration value="InletVelocity_D"/>
+                <xs:enumeration value="InletPressure_D"/>
+                <xs:enumeration value="InletDensity_D"/>
+                <xs:enumeration value="InletTemperature_D"/>
+                <xs:enumeration value="InitTemperature_D"/>
+                <xs:enumeration value="HeaterTemperature_D"/>
+                <xs:enumeration value="FluidAlpha_D"/>
+                <xs:enumeration value="SolidAlpha_D"/>
+                <xs:enumeration value="LimitTemperature_D"/>
+                <xs:enumeration value="InletTotalPressure_D"/>
+                <xs:enumeration value="OutletTotalPressure_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -296,6 +310,8 @@
                 <xs:enumeration value="LimitTemperature"/>
                 <xs:enumeration value="InletTotalPressure"/>
                 <xs:enumeration value="OutletTotalPressure"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="HeatFluxInObj"/>
                 <xs:enumeration value="HeatSquareFluxInObj"/>
@@ -497,6 +513,8 @@
                 <xs:enumeration value="LimitTemperature"/>
                 <xs:enumeration value="InletTotalPressure"/>
                 <xs:enumeration value="OutletTotalPressure"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="HeatFluxInObj"/>
                 <xs:enumeration value="HeatSquareFluxInObj"/>

@@ -276,6 +276,15 @@
                 <xs:enumeration value="Power"/>
                 <xs:enumeration value="Power2"/>
                 <xs:enumeration value="VolumeW"/>
+                <xs:enumeration value="Smag_D"/>
+                <xs:enumeration value="PDX_D"/>
+                <xs:enumeration value="PDY_D"/>
+                <xs:enumeration value="PRAD_D"/>
+                <xs:enumeration value="SM_D"/>
+                <xs:enumeration value="SM_M_D"/>
+                <xs:enumeration value="EPSF_D"/>
+                <xs:enumeration value="BF_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -294,6 +303,8 @@
                 <xs:enumeration value="SM_M"/>
                 <xs:enumeration value="EPSF"/>
                 <xs:enumeration value="BF"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="VelocityY"/>
@@ -502,6 +513,8 @@
                 <xs:enumeration value="SM_M"/>
                 <xs:enumeration value="EPSF"/>
                 <xs:enumeration value="BF"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="VelocityY"/>

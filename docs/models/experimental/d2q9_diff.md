@@ -6,8 +6,8 @@ d2q9_diff
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_diff/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_diff/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_diff/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_diff/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -25,6 +25,8 @@ d2q9_diff
 |`InitDensity`||inlet pressure|
 |`InletDensity`||inlet pressure|
 |`OutletDensity`||inlet pressure|
+|`Descent`||Optimization Descent|
+|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -42,6 +44,12 @@ d2q9_diff
 | Name | [Unit](Units) | Comment |
 | --- | --- | --- |
 |`Diff`|`1`|pressure loss|
+|`nu0_D`|`1`|Gradient of objective with respect to [viscosity]|
+|`nu1_D`|`1`|Gradient of objective with respect to [viscosity]|
+|`InitDensity_D`|`1`|Gradient of objective with respect to [inlet pressure]|
+|`InletDensity_D`|`1`|Gradient of objective with respect to [inlet pressure]|
+|`OutletDensity_D`|`1`|Gradient of objective with respect to [inlet pressure]|
+|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)
