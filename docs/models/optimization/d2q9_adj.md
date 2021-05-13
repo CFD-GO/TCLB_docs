@@ -6,8 +6,8 @@ d2q9_adj
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_adj/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_adj/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/d2q9_adj/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/d2q9_adj/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -35,6 +35,8 @@ d2q9_adj
 |`ForceY`||Gravitation in the direction of y|
 |`PorocityGamma`|1.0 - exp(PorocityTheta)|gamma in hiperbolic transformation of porocity (-infty,1)|
 |`PorocityTheta`||theta in hiperbolic transformation of porocity|
+|`Descent`||Optimization Descent|
+|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -59,6 +61,13 @@ d2q9_adj
 |`PressureLoss`|`1mPa`|pressure loss|
 |`OutletFlux`|`1m2/s`|pressure loss|
 |`InletFlux`|`1m2/s`|pressure loss|
+|`omega_D`|`1`|Gradient of objective with respect to [one over relaxation time]|
+|`nu_D`|`1`|Gradient of objective with respect to [viscosity]|
+|`ForceX_D`|`1`|Gradient of objective with respect to [Gravitation in the direction of x]|
+|`ForceY_D`|`1`|Gradient of objective with respect to [Gravitation in the direction of y]|
+|`PorocityGamma_D`|`1`|Gradient of objective with respect to [gamma in hiperbolic transformation of porocity (-infty,1)]|
+|`PorocityTheta_D`|`1`|Gradient of objective with respect to [theta in hiperbolic transformation of porocity]|
+|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)

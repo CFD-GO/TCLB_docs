@@ -26,8 +26,8 @@ It is a 2d version od d3q27q27_cm_cht
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9q9_cm_cht_IBB_SMAG/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9q9_cm_cht_IBB_SMAG/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/d2q9q9_cm_cht_IBB_SMAG/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/d2q9q9_cm_cht_IBB_SMAG/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 

@@ -275,6 +275,13 @@
                 <xs:enumeration value="HighTemperature"/>
                 <xs:enumeration value="LowTemperature"/>
                 <xs:enumeration value="MaterialPenalty"/>
+                <xs:enumeration value="nu_D"/>
+                <xs:enumeration value="FluidAlpha_D"/>
+                <xs:enumeration value="SolidAlpha_D"/>
+                <xs:enumeration value="Buoyancy_D"/>
+                <xs:enumeration value="PorocityGamma_D"/>
+                <xs:enumeration value="PorocityTheta_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -291,6 +298,8 @@
                 <xs:enumeration value="Buoyancy"/>
                 <xs:enumeration value="PorocityGamma"/>
                 <xs:enumeration value="PorocityTheta"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Velocity"/>
                 <xs:enumeration value="Pressure"/>
@@ -491,6 +500,8 @@
                 <xs:enumeration value="Buoyancy"/>
                 <xs:enumeration value="PorocityGamma"/>
                 <xs:enumeration value="PorocityTheta"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Velocity"/>
                 <xs:enumeration value="Pressure"/>

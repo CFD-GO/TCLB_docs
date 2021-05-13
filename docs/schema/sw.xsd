@@ -271,6 +271,15 @@
                 <xs:enumeration value="TotalDiff"/>
                 <xs:enumeration value="Material"/>
                 <xs:enumeration value="EnergyGain"/>
+                <xs:enumeration value="omega_D"/>
+                <xs:enumeration value="nu_D"/>
+                <xs:enumeration value="InletVelocity_D"/>
+                <xs:enumeration value="InletPressure_D"/>
+                <xs:enumeration value="InletDensity_D"/>
+                <xs:enumeration value="Gravity_D"/>
+                <xs:enumeration value="SolidH_D"/>
+                <xs:enumeration value="EnergySink_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -289,6 +298,8 @@
                 <xs:enumeration value="Gravity"/>
                 <xs:enumeration value="SolidH"/>
                 <xs:enumeration value="EnergySink"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Height"/>
                 <xs:enumeration value="PressDiffInObj"/>
@@ -484,6 +495,8 @@
                 <xs:enumeration value="Gravity"/>
                 <xs:enumeration value="SolidH"/>
                 <xs:enumeration value="EnergySink"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Height"/>
                 <xs:enumeration value="PressDiffInObj"/>

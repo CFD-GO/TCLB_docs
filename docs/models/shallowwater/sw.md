@@ -11,8 +11,8 @@ Model has adjoint capabilities for unsteady optimization.
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/sw/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/sw/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/sw/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/sw/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -37,6 +37,8 @@ Model has adjoint capabilities for unsteady optimization.
 |`Gravity`||inlet density|
 |`SolidH`||inlet density|
 |`EnergySink`||inlet density|
+|`Descent`||Optimization Descent|
+|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -58,6 +60,15 @@ Model has adjoint capabilities for unsteady optimization.
 |`TotalDiff`|`1`|total variation of velocity|
 |`Material`|`1`|total material|
 |`EnergyGain`|`1`|pressure loss|
+|`omega_D`|`1`|Gradient of objective with respect to [one over relaxation time]|
+|`nu_D`|`1`|Gradient of objective with respect to [viscosity]|
+|`InletVelocity_D`|`1`|Gradient of objective with respect to [inlet velocity]|
+|`InletPressure_D`|`1`|Gradient of objective with respect to [inlet pressure]|
+|`InletDensity_D`|`1`|Gradient of objective with respect to [inlet density]|
+|`Gravity_D`|`1`|Gradient of objective with respect to [inlet density]|
+|`SolidH_D`|`1`|Gradient of objective with respect to [inlet density]|
+|`EnergySink_D`|`1`|Gradient of objective with respect to [inlet density]|
+|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)

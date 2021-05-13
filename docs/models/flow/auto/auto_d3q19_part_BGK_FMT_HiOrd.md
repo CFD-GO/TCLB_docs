@@ -6,8 +6,8 @@ auto_d3q19_part_BGK_FMT_HiOrd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/auto_d3q19_part_BGK_FMT_HiOrd/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/auto_d3q19_part_BGK_FMT_HiOrd/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/auto_d3q19_part_BGK_FMT_HiOrd/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at cbad57a)/src/auto_d3q19_part_BGK_FMT_HiOrd/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
