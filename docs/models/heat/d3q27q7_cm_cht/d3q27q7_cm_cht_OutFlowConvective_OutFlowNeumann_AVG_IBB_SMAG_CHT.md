@@ -24,8 +24,8 @@
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG_CHT/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG_CHT/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG_CHT/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d3q27q7_cm_cht_OutFlowConvective_OutFlowNeumann_AVG_IBB_SMAG_CHT/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 

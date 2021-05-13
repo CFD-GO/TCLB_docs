@@ -30,7 +30,7 @@ linemark=function(...) {invisible(NULL)}
 
 ############# Parameters and settings ######
 
-MODEL=TRUE
+ADJOINT=1
 MODEL="d3q19_heat_adj_prop"
 Options=list()
 add.include.dir("tools")

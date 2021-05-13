@@ -272,6 +272,11 @@
                 <xs:enumeration value="NMovingWallForce"/>
                 <xs:enumeration value="SWallForce"/>
                 <xs:enumeration value="MovingWallPower"/>
+                <xs:enumeration value="omega_D"/>
+                <xs:enumeration value="nu_D"/>
+                <xs:enumeration value="omegaT_D"/>
+                <xs:enumeration value="K_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -286,6 +291,8 @@
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="omegaT"/>
                 <xs:enumeration value="K"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="MovingWallVelocity"/>
                 <xs:enumeration value="Velocity"/>
@@ -481,6 +488,8 @@
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="omegaT"/>
                 <xs:enumeration value="K"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="MovingWallVelocity"/>
                 <xs:enumeration value="Velocity"/>

@@ -6,8 +6,8 @@ d2q9_heat_adj
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_heat_adj/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at aa97a05)/src/d2q9_heat_adj/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_heat_adj/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at FETCH_HEAD)/src/d2q9_heat_adj/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -38,6 +38,8 @@ d2q9_heat_adj
 |`LimitTemperature`||temperature of the heater|
 |`InletTotalPressure`||temperature of the heater|
 |`OutletTotalPressure`||temperature of the heater|
+|`Descent`||Optimization Descent|
+|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -60,6 +62,20 @@ d2q9_heat_adj
 |`Temperature`|`1`|integral of temperature|
 |`HighTemperature`|`1`|penalty for high temperature|
 |`LowTemperature`|`1`|penalty for low temperature|
+|`omega_D`|`1`|Gradient of objective with respect to [one over relaxation time]|
+|`nu0_D`|`1`|Gradient of objective with respect to [viscosity]|
+|`InletVelocity_D`|`1`|Gradient of objective with respect to [inlet velocity]|
+|`InletPressure_D`|`1`|Gradient of objective with respect to [inlet pressure]|
+|`InletDensity_D`|`1`|Gradient of objective with respect to [inlet density]|
+|`InletTemperature_D`|`1`|Gradient of objective with respect to [inlet temperature]|
+|`InitTemperature_D`|`1`|Gradient of objective with respect to [inlet temperature]|
+|`HeaterTemperature_D`|`1`|Gradient of objective with respect to [inlet temperature]|
+|`FluidAlpha_D`|`1`|Gradient of objective with respect to [thermal diffusivity of fluid]|
+|`SolidAlpha_D`|`1`|Gradient of objective with respect to [thermal diffusivity of solid]|
+|`LimitTemperature_D`|`1`|Gradient of objective with respect to [temperature of the heater]|
+|`InletTotalPressure_D`|`1`|Gradient of objective with respect to [temperature of the heater]|
+|`OutletTotalPressure_D`|`1`|Gradient of objective with respect to [temperature of the heater]|
+|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)

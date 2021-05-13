@@ -268,6 +268,12 @@
             <xs:simpleType>
               <xs:restriction base="xs:string">
                 <xs:enumeration value="Diff"/>
+                <xs:enumeration value="nu0_D"/>
+                <xs:enumeration value="nu1_D"/>
+                <xs:enumeration value="InitDensity_D"/>
+                <xs:enumeration value="InletDensity_D"/>
+                <xs:enumeration value="OutletDensity_D"/>
+                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -283,6 +289,8 @@
                 <xs:enumeration value="InitDensity"/>
                 <xs:enumeration value="InletDensity"/>
                 <xs:enumeration value="OutletDensity"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="DiffInObj"/>
               </xs:restriction>
@@ -471,6 +479,8 @@
                 <xs:enumeration value="InitDensity"/>
                 <xs:enumeration value="InletDensity"/>
                 <xs:enumeration value="OutletDensity"/>
+                <xs:enumeration value="Descent"/>
+                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="DiffInObj"/>
               </xs:restriction>
