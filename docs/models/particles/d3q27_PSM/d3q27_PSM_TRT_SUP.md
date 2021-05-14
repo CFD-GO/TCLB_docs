@@ -6,8 +6,8 @@ d3q27_PSM_TRT_SUP
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_PSM_TRT_SUP/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_PSM_TRT_SUP/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 67a6be7)/src/d3q27_PSM_TRT_SUP/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 67a6be7)/src/d3q27_PSM_TRT_SUP/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 

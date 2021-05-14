@@ -1382,6 +1382,10 @@
    <uri name="urn:tclb:d3q27_pf_velocity_planarBenchmark" uri="schema/d3q27_pf_velocity_planarBenchmark.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity_autosym" uri="schema/d3q27_pf_velocity_autosym.xsd" />
    <uri name="urn:tclb:d3q27_pf_velocity_autosym" uri="schema/d3q27_pf_velocity_autosym.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_thermo" uri="schema/d3q27_pf_velocity_BGK_thermo.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_thermo" uri="schema/d3q27_pf_velocity_BGK_thermo.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_planarBenchmark" uri="schema/d3q27_pf_velocity_BGK_planarBenchmark.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_planarBenchmark" uri="schema/d3q27_pf_velocity_BGK_planarBenchmark.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity_thermo_planarBenchmark" uri="schema/d3q27_pf_velocity_thermo_planarBenchmark.xsd" />
    <uri name="urn:tclb:d3q27_pf_velocity_thermo_planarBenchmark" uri="schema/d3q27_pf_velocity_thermo_planarBenchmark.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity_OutFlow_autosym" uri="schema/d3q27_pf_velocity_OutFlow_autosym.xsd" />
@@ -1392,8 +1396,16 @@
    <uri name="urn:tclb:d3q27_pf_velocity_thermo_autosym" uri="schema/d3q27_pf_velocity_thermo_autosym.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_planarBenchmark_autosym.xsd" />
    <uri name="urn:tclb:d3q27_pf_velocity_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_planarBenchmark_autosym.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_thermo_planarBenchmark" uri="schema/d3q27_pf_velocity_BGK_thermo_planarBenchmark.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_thermo_planarBenchmark" uri="schema/d3q27_pf_velocity_BGK_thermo_planarBenchmark.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_thermo_autosym" uri="schema/d3q27_pf_velocity_BGK_thermo_autosym.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_thermo_autosym" uri="schema/d3q27_pf_velocity_BGK_thermo_autosym.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_BGK_planarBenchmark_autosym.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_BGK_planarBenchmark_autosym.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity_thermo_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_thermo_planarBenchmark_autosym.xsd" />
    <uri name="urn:tclb:d3q27_pf_velocity_thermo_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_thermo_planarBenchmark_autosym.xsd"/> 
+   <public publicId="urn:tclb:d3q27_pf_velocity_BGK_thermo_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_BGK_thermo_planarBenchmark_autosym.xsd" />
+   <uri name="urn:tclb:d3q27_pf_velocity_BGK_thermo_planarBenchmark_autosym" uri="schema/d3q27_pf_velocity_BGK_thermo_planarBenchmark_autosym.xsd"/> 
    <public publicId="urn:tclb:d3q27_pf_velocity" uri="schema/d3q27_pf_velocity.xsd" />
    <uri name="urn:tclb:d3q27_pf_velocity" uri="schema/d3q27_pf_velocity.xsd"/> 
    <public publicId="urn:tclb:d2q9_lee" uri="schema/d2q9_lee.xsd" />

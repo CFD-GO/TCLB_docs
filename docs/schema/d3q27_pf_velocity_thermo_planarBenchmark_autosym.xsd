@@ -275,22 +275,22 @@
                 <xs:enumeration value="RTISpike"/>
                 <xs:enumeration value="RTIBubble"/>
                 <xs:enumeration value="RTISaddle"/>
+                <xs:enumeration value="XLocation"/>
                 <xs:enumeration value="PressureLoss"/>
                 <xs:enumeration value="OutletFlux"/>
                 <xs:enumeration value="InletFlux"/>
                 <xs:enumeration value="TotalDensity"/>
                 <xs:enumeration value="KineticEnergy"/>
-                <xs:enumeration value="XLocation"/>
                 <xs:enumeration value="GasTotalVelocity"/>
                 <xs:enumeration value="GasTotalVelocityX"/>
                 <xs:enumeration value="GasTotalVelocityY"/>
                 <xs:enumeration value="GasTotalVelocityZ"/>
-                <xs:enumeration value="GasCells"/>
+                <xs:enumeration value="GasTotalPhase"/>
                 <xs:enumeration value="LiqTotalVelocity"/>
                 <xs:enumeration value="LiqTotalVelocityX"/>
                 <xs:enumeration value="LiqTotalVelocityY"/>
                 <xs:enumeration value="LiqTotalVelocityZ"/>
-                <xs:enumeration value="LiqCells"/>
+                <xs:enumeration value="LiqTotalPhase"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -318,8 +318,6 @@
                 <xs:enumeration value="myL"/>
                 <xs:enumeration value="MIDPOINT"/>
                 <xs:enumeration value="PLUSMINUS"/>
-                <xs:enumeration value="HEIGHT"/>
-                <xs:enumeration value="developedFlow"/>
                 <xs:enumeration value="Density_h"/>
                 <xs:enumeration value="Density_l"/>
                 <xs:enumeration value="PhaseField_h"/>
@@ -340,6 +338,8 @@
                 <xs:enumeration value="Donut_h"/>
                 <xs:enumeration value="Donut_D"/>
                 <xs:enumeration value="Donut_x0"/>
+                <xs:enumeration value="HEIGHT"/>
+                <xs:enumeration value="developedFlow"/>
                 <xs:enumeration value="tau_l"/>
                 <xs:enumeration value="tau_h"/>
                 <xs:enumeration value="Viscosity_l"/>
@@ -353,8 +353,8 @@
                 <xs:enumeration value="xyzTrack"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="T_init"/>
-                <xs:enumeration value="Uavg"/>
                 <xs:enumeration value="PhaseField"/>
+                <xs:enumeration value="Uavg"/>
                 <xs:enumeration value="VelocityX"/>
                 <xs:enumeration value="VelocityY"/>
                 <xs:enumeration value="VelocityZ"/>
@@ -366,23 +366,23 @@
                 <xs:enumeration value="RTISpikeInObj"/>
                 <xs:enumeration value="RTIBubbleInObj"/>
                 <xs:enumeration value="RTISaddleInObj"/>
+                <xs:enumeration value="XLocationInObj"/>
+                <xs:enumeration value="DropFrontInObj"/>
                 <xs:enumeration value="PressureLossInObj"/>
                 <xs:enumeration value="OutletFluxInObj"/>
                 <xs:enumeration value="InletFluxInObj"/>
                 <xs:enumeration value="TotalDensityInObj"/>
                 <xs:enumeration value="KineticEnergyInObj"/>
-                <xs:enumeration value="XLocationInObj"/>
                 <xs:enumeration value="GasTotalVelocityInObj"/>
                 <xs:enumeration value="GasTotalVelocityXInObj"/>
                 <xs:enumeration value="GasTotalVelocityYInObj"/>
                 <xs:enumeration value="GasTotalVelocityZInObj"/>
-                <xs:enumeration value="GasCellsInObj"/>
+                <xs:enumeration value="GasTotalPhaseInObj"/>
                 <xs:enumeration value="LiqTotalVelocityInObj"/>
                 <xs:enumeration value="LiqTotalVelocityXInObj"/>
                 <xs:enumeration value="LiqTotalVelocityYInObj"/>
                 <xs:enumeration value="LiqTotalVelocityZInObj"/>
-                <xs:enumeration value="LiqCellsInObj"/>
-                <xs:enumeration value="DropFrontInObj"/>
+                <xs:enumeration value="LiqTotalPhaseInObj"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -581,8 +581,6 @@
                 <xs:enumeration value="myL"/>
                 <xs:enumeration value="MIDPOINT"/>
                 <xs:enumeration value="PLUSMINUS"/>
-                <xs:enumeration value="HEIGHT"/>
-                <xs:enumeration value="developedFlow"/>
                 <xs:enumeration value="Density_h"/>
                 <xs:enumeration value="Density_l"/>
                 <xs:enumeration value="PhaseField_h"/>
@@ -603,6 +601,8 @@
                 <xs:enumeration value="Donut_h"/>
                 <xs:enumeration value="Donut_D"/>
                 <xs:enumeration value="Donut_x0"/>
+                <xs:enumeration value="HEIGHT"/>
+                <xs:enumeration value="developedFlow"/>
                 <xs:enumeration value="tau_l"/>
                 <xs:enumeration value="tau_h"/>
                 <xs:enumeration value="Viscosity_l"/>
@@ -616,8 +616,8 @@
                 <xs:enumeration value="xyzTrack"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="T_init"/>
-                <xs:enumeration value="Uavg"/>
                 <xs:enumeration value="PhaseField"/>
+                <xs:enumeration value="Uavg"/>
                 <xs:enumeration value="VelocityX"/>
                 <xs:enumeration value="VelocityY"/>
                 <xs:enumeration value="VelocityZ"/>
@@ -629,23 +629,23 @@
                 <xs:enumeration value="RTISpikeInObj"/>
                 <xs:enumeration value="RTIBubbleInObj"/>
                 <xs:enumeration value="RTISaddleInObj"/>
+                <xs:enumeration value="XLocationInObj"/>
+                <xs:enumeration value="DropFrontInObj"/>
                 <xs:enumeration value="PressureLossInObj"/>
                 <xs:enumeration value="OutletFluxInObj"/>
                 <xs:enumeration value="InletFluxInObj"/>
                 <xs:enumeration value="TotalDensityInObj"/>
                 <xs:enumeration value="KineticEnergyInObj"/>
-                <xs:enumeration value="XLocationInObj"/>
                 <xs:enumeration value="GasTotalVelocityInObj"/>
                 <xs:enumeration value="GasTotalVelocityXInObj"/>
                 <xs:enumeration value="GasTotalVelocityYInObj"/>
                 <xs:enumeration value="GasTotalVelocityZInObj"/>
-                <xs:enumeration value="GasCellsInObj"/>
+                <xs:enumeration value="GasTotalPhaseInObj"/>
                 <xs:enumeration value="LiqTotalVelocityInObj"/>
                 <xs:enumeration value="LiqTotalVelocityXInObj"/>
                 <xs:enumeration value="LiqTotalVelocityYInObj"/>
                 <xs:enumeration value="LiqTotalVelocityZInObj"/>
-                <xs:enumeration value="LiqCellsInObj"/>
-                <xs:enumeration value="DropFrontInObj"/>
+                <xs:enumeration value="LiqTotalPhaseInObj"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -1296,13 +1296,6 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Smoothing">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Spiketrack">
     <xs:complexType>
       <xs:complexContent>
@@ -1324,6 +1317,48 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Smoothing">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPressure">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WPressure">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NVelocity">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EVelocity">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WVelocity">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="MovingWall_N">
     <xs:complexType>
       <xs:complexContent>
@@ -1338,27 +1373,6 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="NVelocity">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EPressure">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EVelocity">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Solid">
     <xs:complexType>
       <xs:complexContent>
@@ -1367,20 +1381,6 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
     </xs:complexType>
   </xs:element>
   <xs:element name="Wall">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WPressure">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="nodetypes"/>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WVelocity">
     <xs:complexType>
       <xs:complexContent>
         <xs:extension base="nodetypes"/>
@@ -1510,19 +1510,19 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="ConstantTemp"/>
       <xs:element ref="EAdiabatic"/>
       <xs:element ref="Centerline"/>
-      <xs:element ref="Smoothing"/>
       <xs:element ref="Spiketrack"/>
       <xs:element ref="Saddletrack"/>
       <xs:element ref="Bubbletrack"/>
+      <xs:element ref="Smoothing"/>
+      <xs:element ref="EPressure"/>
+      <xs:element ref="WPressure"/>
+      <xs:element ref="NVelocity"/>
+      <xs:element ref="EVelocity"/>
+      <xs:element ref="WVelocity"/>
       <xs:element ref="MovingWall_N"/>
       <xs:element ref="MovingWall_S"/>
-      <xs:element ref="NVelocity"/>
-      <xs:element ref="EPressure"/>
-      <xs:element ref="EVelocity"/>
       <xs:element ref="Solid"/>
       <xs:element ref="Wall"/>
-      <xs:element ref="WPressure"/>
-      <xs:element ref="WVelocity"/>
       <xs:element ref="BGK"/>
       <xs:element ref="MRT"/>
       <xs:element ref="SymmetryX_plus"/>

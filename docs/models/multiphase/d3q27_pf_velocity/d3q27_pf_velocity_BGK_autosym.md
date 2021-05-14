@@ -13,15 +13,15 @@ The model currently has 3 options at compile time:
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 67a6be7)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 67a6be7)/src/d3q27_pf_velocity_BGK_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
 | Name | Comment |
 | --- | --- |
-|`Uavg`|Average velocity of channel for 2D Poiseuille flow|
 |`PhaseField`|Initial PhaseField distribution|
+|`Uavg`|Average velocity of channel for 2D Poiseuille flow|
 |`VelocityX`|inlet/outlet/init velocity|
 |`VelocityY`|inlet/outlet/init velocity|
 |`VelocityZ`|inlet/outlet/init velocity|
@@ -32,31 +32,29 @@ The model currently has 3 options at compile time:
 |`RTISpikeInObj`|Weight of [SpikeTracker ] in objective|
 |`RTIBubbleInObj`|Weight of [BubbleTracker] in objective|
 |`RTISaddleInObj`|Weight of [SaddleTracker] in objective|
+|`XLocationInObj`|Weight of [tracking of x-centroid of the gas regions in domain] in objective|
+|`DropFrontInObj`|Weight of [Highest location of droplet] in objective|
 |`PressureLossInObj`|Weight of [pressure loss] in objective|
 |`OutletFluxInObj`|Weight of [pressure loss] in objective|
 |`InletFluxInObj`|Weight of [pressure loss] in objective|
 |`TotalDensityInObj`|Weight of [Mass conservation check] in objective|
 |`KineticEnergyInObj`|Weight of [Measure of kinetic energy] in objective|
-|`XLocationInObj`|Weight of [tracking of x-centroid of the gas regions in domain] in objective|
 |`GasTotalVelocityInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityXInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityYInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
 |`GasTotalVelocityZInObj`|Weight of [use to determine avg velocity of bubbles] in objective|
-|`GasCellsInObj`|Weight of [use in line with GasTotalVelocity to determine average velocity] in objective|
+|`GasTotalPhaseInObj`|Weight of [use in line with GasTotalVelocity to determine average velocity] in objective|
 |`LiqTotalVelocityInObj`|Weight of [use to determine avg velocity of droplets] in objective|
 |`LiqTotalVelocityXInObj`|Weight of [use to determine avg velocity of droplets] in objective|
 |`LiqTotalVelocityYInObj`|Weight of [use to determine avg velocity of droplets] in objective|
 |`LiqTotalVelocityZInObj`|Weight of [use to determine avg velocity of droplets] in objective|
-|`LiqCellsInObj`|Weight of [use in line with LiqTotalVelocity to determine average velocity] in objective|
-|`DropFrontInObj`|Weight of [Highest location of droplet] in objective|
+|`LiqTotalPhaseInObj`|Weight of [use in line with LiqTotalVelocity to determine average velocity] in objective|
 
 
 ### [Global Settings](Settings)
 
 | Name | Derived | Comment |
 | --- | --- | --- |
-|`HEIGHT`||Height of channel for 2D Poiseuille flow|
-|`developedFlow`||set greater than 0 for fully developed flow in the domain (x-direction)|
 |`Density_h`||High density|
 |`Density_l`||Low  density|
 |`PhaseField_h`||PhaseField in Liquid|
@@ -77,6 +75,8 @@ The model currently has 3 options at compile time:
 |`Donut_h`||Half donut thickness, i.e. the radius of the cross-section|
 |`Donut_D`||Dilation factor along the x-axis|
 |`Donut_x0`||Position along x-axis|
+|`HEIGHT`||Height of channel for 2D Poiseuille flow|
+|`developedFlow`||set greater than 0 for fully developed flow in the domain (x-direction)|
 |`tau_l`|(3*Viscosity_l)|relaxation time (low density fluid)|
 |`tau_h`|(3*Viscosity_h)|relaxation time (high density fluid)|
 |`Viscosity_l`||kinematic viscosity|
@@ -111,30 +111,30 @@ The model currently has 3 options at compile time:
 |`RTISpike`|`1`|SpikeTracker |
 |`RTIBubble`|`1`|BubbleTracker|
 |`RTISaddle`|`1`|SaddleTracker|
+|`XLocation`|`m`|tracking of x-centroid of the gas regions in domain|
 |`PressureLoss`|`1mPa`|pressure loss|
 |`OutletFlux`|`1m2/s`|pressure loss|
 |`InletFlux`|`1m2/s`|pressure loss|
 |`TotalDensity`|`1kg/m3`|Mass conservation check|
 |`KineticEnergy`|`J`|Measure of kinetic energy|
-|`XLocation`|`m`|tracking of x-centroid of the gas regions in domain|
 |`GasTotalVelocity`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityX`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityY`|`m/s`|use to determine avg velocity of bubbles|
 |`GasTotalVelocityZ`|`m/s`|use to determine avg velocity of bubbles|
-|`GasCells`|`1`|use in line with GasTotalVelocity to determine average velocity|
+|`GasTotalPhase`|`1`|use in line with GasTotalVelocity to determine average velocity|
 |`LiqTotalVelocity`|`m/s`|use to determine avg velocity of droplets|
 |`LiqTotalVelocityX`|`m/s`|use to determine avg velocity of droplets|
 |`LiqTotalVelocityY`|`m/s`|use to determine avg velocity of droplets|
 |`LiqTotalVelocityZ`|`m/s`|use to determine avg velocity of droplets|
-|`LiqCells`|`1`|use in line with LiqTotalVelocity to determine average velocity|
+|`LiqTotalPhase`|`1`|use in line with LiqTotalVelocity to determine average velocity|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)
 
 | Group | Types |
 | --- | --- |
-|ADDITIONALS|Centerline, Smoothing, Spiketrack, Saddletrack, Bubbletrack|
-|BOUNDARY|MovingWall_N, MovingWall_S, NVelocity, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
+|ADDITIONALS|Centerline, Spiketrack, Saddletrack, Bubbletrack, Smoothing|
+|BOUNDARY|EPressure, WPressure, NVelocity, EVelocity, WVelocity, MovingWall_N, MovingWall_S, Solid, Wall|
 |COLLISION|BGK, MRT|
 |SETTINGZONE|DefaultZone|
 |SYMX|SymmetryX_plus, SymmetryX_minus|
