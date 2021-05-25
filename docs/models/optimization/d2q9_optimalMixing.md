@@ -6,8 +6,8 @@ d2q9_optimalMixing
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_optimalMixing/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_optimalMixing/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_optimalMixing/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_optimalMixing/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -32,8 +32,6 @@ d2q9_optimalMixing
 |`nu`||viscosity|
 |`omegaT`|1.0/(3*K + 0.5)|one over relaxation time - thermal|
 |`K`||thermal_diffusivity|
-|`Descent`||Optimization Descent|
-|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -55,19 +53,16 @@ d2q9_optimalMixing
 |`NMovingWallForce`|`1`|NMovingWallForce|
 |`SWallForce`|`1`|SWallForce|
 |`MovingWallPower`|`1`|MovingWallPower|
-|`omega_D`|`1`|Gradient of objective with respect to [one over relaxation time]|
-|`nu_D`|`1`|Gradient of objective with respect to [viscosity]|
-|`omegaT_D`|`1`|Gradient of objective with respect to [one over relaxation time - thermal]|
-|`K_D`|`1`|Gradient of objective with respect to [thermal_diffusivity]|
-|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|NMovingWall, SWall, Solid, Wall|
 |COLLISION|MRT|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

@@ -6,8 +6,8 @@ d2q9_scmp_LycettLuo_TRT
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_scmp_LycettLuo_TRT/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_scmp_LycettLuo_TRT/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_scmp_LycettLuo_TRT/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_scmp_LycettLuo_TRT/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -90,7 +90,9 @@ d2q9_scmp_LycettLuo_TRT
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|NMovingWall, MovingWall, ESymmetry, NSymmetry, SSymmetry|
+|NONE|None|
 |OBJECTIVE|SolidBoundary1, SolidBoundary2, SolidBoundary3|
 |SETTINGZONE|DefaultZone|
 

@@ -6,8 +6,8 @@ d2q9_pp_MCMP
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_pp_MCMP/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_pp_MCMP/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_pp_MCMP/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_pp_MCMP/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -78,10 +78,12 @@ d2q9_pp_MCMP
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|BGK|
 |ENTROPIC|Stab|
 |LES|Smagorinsky|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

@@ -6,8 +6,8 @@ d3q19_kuper
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q19_kuper/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q19_kuper/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q19_kuper/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q19_kuper/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -76,8 +76,10 @@ d3q19_kuper
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|EPressure, Solid, Wall, WPressure, WPressureL, WVelocity, MovingWall|
 |COLLISION|MRT|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

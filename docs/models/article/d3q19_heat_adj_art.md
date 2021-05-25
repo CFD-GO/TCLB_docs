@@ -6,8 +6,8 @@ d3q19_heat_adj_art
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q19_heat_adj_art/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q19_heat_adj_art/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q19_heat_adj_art/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q19_heat_adj_art/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -37,8 +37,6 @@ d3q19_heat_adj_art
 |`Buoyancy`||Buoyancy coefficient of temperature|
 |`PorocityGamma`|1.0 - exp(PorocityTheta)|Gamma in hiperbolic transformation of porocity (-infty,1)|
 |`PorocityTheta`||Theta in hiperbolic transformation of porocity|
-|`Descent`||Optimization Descent|
-|`GradientSmooth`||Gradient smoothing in OptSolve|
 |`Threshold`||Parameters threshold|
 
 ### [Exported Quantities](Quantities) (VTK, etc)
@@ -63,13 +61,6 @@ d3q19_heat_adj_art
 |`HighTemperature`|`1`|Penalty for high temperature|
 |`LowTemperature`|`1`|Penalty for low temperature|
 |`MaterialPenalty`|`m3`|Quadratic penalty for intermediate material parameter|
-|`nu_D`|`1`|Gradient of objective with respect to [viscosity]|
-|`FluidAlpha_D`|`1`|Gradient of objective with respect to [inlet density]|
-|`SolidAlpha_D`|`1`|Gradient of objective with respect to [Heat conductivity of solid]|
-|`Buoyancy_D`|`1`|Gradient of objective with respect to [Buoyancy coefficient of temperature]|
-|`PorocityGamma_D`|`1`|Gradient of objective with respect to [Gamma in hiperbolic transformation of porocity (-infty,1)]|
-|`PorocityTheta_D`|`1`|Gradient of objective with respect to [Theta in hiperbolic transformation of porocity]|
-|`AdjointRes`|`1`|square L2 norm of adjoint change|
 |`Objective`|`1`|Objective function|
 
 ### [Node Types](Node-Types)
@@ -77,9 +68,11 @@ d3q19_heat_adj_art
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|Heater, HeatSource|
+|ALL|Clear|
 |BOUNDARY|EPressure, Solid, Wall, WPressure, WPressureL, WVelocity|
 |COLLISION|BGK, MRT|
 |DESIGNSPACE|DesignSpace|
+|NONE|None|
 |OBJECTIVE|Thermometer, Inlet, Outlet|
 |SETTINGZONE|DefaultZone|
 

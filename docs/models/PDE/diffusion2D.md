@@ -6,8 +6,8 @@ diffusion2D
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/diffusion2D/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/diffusion2D/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/diffusion2D/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/diffusion2D/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -39,7 +39,9 @@ diffusion2D
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|Dirichlet|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

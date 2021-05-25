@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|U|P|F|Finternal|DEBUG|BOUNDARY|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -1131,6 +1131,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1149,6 +1163,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="BOUNDARY"/>
           <xs:enumeration value="OBJECTIVE"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1191,6 +1206,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="SolidBoundary2"/>
       <xs:element ref="SolidBoundary3"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

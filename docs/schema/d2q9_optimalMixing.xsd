@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|ALL)(,(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|NONE|ALL)(,(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|ALL)(,(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|NONE|ALL)(,(Rho|T|U|RhoB|TB|BOUNDARY|COLLISION|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -272,11 +272,6 @@
                 <xs:enumeration value="NMovingWallForce"/>
                 <xs:enumeration value="SWallForce"/>
                 <xs:enumeration value="MovingWallPower"/>
-                <xs:enumeration value="omega_D"/>
-                <xs:enumeration value="nu_D"/>
-                <xs:enumeration value="omegaT_D"/>
-                <xs:enumeration value="K_D"/>
-                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -291,8 +286,6 @@
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="omegaT"/>
                 <xs:enumeration value="K"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="MovingWallVelocity"/>
                 <xs:enumeration value="Velocity"/>
@@ -488,8 +481,6 @@
                 <xs:enumeration value="nu"/>
                 <xs:enumeration value="omegaT"/>
                 <xs:enumeration value="K"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="MovingWallVelocity"/>
                 <xs:enumeration value="Velocity"/>
@@ -1075,6 +1066,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1093,6 +1098,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="BOUNDARY"/>
           <xs:enumeration value="COLLISION"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1132,6 +1138,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="Wall"/>
       <xs:element ref="MRT"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

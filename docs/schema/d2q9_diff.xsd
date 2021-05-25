@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|RhoB|W|R|WB|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -268,12 +268,6 @@
             <xs:simpleType>
               <xs:restriction base="xs:string">
                 <xs:enumeration value="Diff"/>
-                <xs:enumeration value="nu0_D"/>
-                <xs:enumeration value="nu1_D"/>
-                <xs:enumeration value="InitDensity_D"/>
-                <xs:enumeration value="InletDensity_D"/>
-                <xs:enumeration value="OutletDensity_D"/>
-                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -289,8 +283,6 @@
                 <xs:enumeration value="InitDensity"/>
                 <xs:enumeration value="InletDensity"/>
                 <xs:enumeration value="OutletDensity"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="DiffInObj"/>
               </xs:restriction>
@@ -479,8 +471,6 @@
                 <xs:enumeration value="InitDensity"/>
                 <xs:enumeration value="InletDensity"/>
                 <xs:enumeration value="OutletDensity"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="DiffInObj"/>
               </xs:restriction>
@@ -1066,6 +1056,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1085,6 +1089,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="COLLISION"/>
           <xs:enumeration value="OBJECTIVE"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1126,6 +1131,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="Obj1"/>
       <xs:element ref="Obj2"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

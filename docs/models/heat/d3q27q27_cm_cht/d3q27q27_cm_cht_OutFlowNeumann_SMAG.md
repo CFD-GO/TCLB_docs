@@ -24,8 +24,8 @@
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27q27_cm_cht_OutFlowNeumann_SMAG/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27q27_cm_cht_OutFlowNeumann_SMAG/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27q27_cm_cht_OutFlowNeumann_SMAG/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27q27_cm_cht_OutFlowNeumann_SMAG/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -122,9 +122,11 @@
 | --- | --- |
 |ADDITIONALS|DarcySolid, Smoothing|
 |ADDITIONALS_HEAT|HeaterDirichletTemperatureEQ, HeaterDirichletTemperatureABB, HeaterSource, HeaterNeumannHeatFluxCylinder, HeaterNeumannHeatFluxEast|
+|ALL|Clear|
 |BODY|Body|
 |BOUNDARY|ENeumann, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|CM, CM_HIGHER, CM_HIGHER_NONLINEAR, Cumulants, BGK|
+|NONE|None|
 |OBJECTIVEFLUX|FluxMeasurmentZone1, FluxMeasurmentZone2|
 |OBJECTIVEFORCE|ForceMeasurmentZone|
 |SETTINGZONE|DefaultZone|

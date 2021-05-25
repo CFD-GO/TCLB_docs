@@ -6,8 +6,8 @@ d3q27_cumulant_qibb_small
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_cumulant_qibb_small/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_cumulant_qibb_small/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27_cumulant_qibb_small/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27_cumulant_qibb_small/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -87,9 +87,11 @@ d3q27_cumulant_qibb_small
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|XYslice1, XZslice1, YZslice1, XYslice2, XZslice2, YZslice2|
+|ALL|Clear|
 |BOUNDARY|SymmetryY, SymmetryZ, TopSymmetry, BottomSymmetry, NVelocity, SVelocity, NPressure, SPressure, EOutlet, WVelocityEq, WVelocityBB, EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|MRT|
 |HO_BOUNDARY|QIBB|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|NONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|NONE|ALL)(,(Rho|U|H|T|m00_F|material_density|cp|conductivity|RawU|KinE|ReStr|Dissipation|averageU|varU|averageP|averageT|ADDITIONALS|ADDITIONALS_HEAT|BODY|BOUNDARY|COLLISION|OBJECTIVEFLUX|OBJECTIVEFORCE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -1238,6 +1238,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1261,6 +1275,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="OBJECTIVEFLUX"/>
           <xs:enumeration value="OBJECTIVEFORCE"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1314,6 +1329,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="FluxMeasurmentZone2"/>
       <xs:element ref="ForceMeasurmentZone"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

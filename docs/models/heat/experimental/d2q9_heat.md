@@ -6,8 +6,8 @@ d2q9_heat
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_heat/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_heat/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_heat/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_heat/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -50,8 +50,10 @@ d2q9_heat
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|Heater|
+|ALL|Clear|
 |BOUNDARY|EPressure, EVelocity, Solid, Wall, WPressure, WVelocity|
 |COLLISION|MRT|
+|NONE|None|
 |OBJECTIVE|Outlet|
 |SETTINGZONE|DefaultZone|
 

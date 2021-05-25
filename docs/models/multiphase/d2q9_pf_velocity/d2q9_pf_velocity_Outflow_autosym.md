@@ -41,8 +41,8 @@ Updates: 16/08/2018: Cascaded (CLBM) collision scheme is introduced for both hyd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_pf_velocity_Outflow_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_pf_velocity_Outflow_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_pf_velocity_Outflow_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_pf_velocity_Outflow_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -132,9 +132,11 @@ Updates: 16/08/2018: Cascaded (CLBM) collision scheme is introduced for both hyd
 | Group | Types |
 | --- | --- |
 |ADDITIONALS|SpikeTrack, BubbleTrack, Smoothing|
+|ALL|Clear|
 |BODY|Body|
 |BOUNDARY|MovingWall_N, MovingWall_S, NVelocity, WVelocity, Convective_E, Convective_N, Neumann_E, Solid, Wall|
 |COLLISION|BGK, MRT|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 |SYMX|SymmetryX_plus, SymmetryX_minus|
 |SYMY|SymmetryY_plus, SymmetryY_minus|

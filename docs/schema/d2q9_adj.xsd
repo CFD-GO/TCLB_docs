@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|U|RhoB|UB|W|WB|BOUNDARY|COLLISION|DESIGNSPACE|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -274,13 +274,6 @@
                 <xs:enumeration value="PressureLoss"/>
                 <xs:enumeration value="OutletFlux"/>
                 <xs:enumeration value="InletFlux"/>
-                <xs:enumeration value="omega_D"/>
-                <xs:enumeration value="nu_D"/>
-                <xs:enumeration value="ForceX_D"/>
-                <xs:enumeration value="ForceY_D"/>
-                <xs:enumeration value="PorocityGamma_D"/>
-                <xs:enumeration value="PorocityTheta_D"/>
-                <xs:enumeration value="AdjointRes"/>
                 <xs:enumeration value="Objective"/>
               </xs:restriction>
             </xs:simpleType>
@@ -297,8 +290,6 @@
                 <xs:enumeration value="ForceY"/>
                 <xs:enumeration value="PorocityGamma"/>
                 <xs:enumeration value="PorocityTheta"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Velocity"/>
                 <xs:enumeration value="Pressure"/>
@@ -497,8 +488,6 @@
                 <xs:enumeration value="ForceY"/>
                 <xs:enumeration value="PorocityGamma"/>
                 <xs:enumeration value="PorocityTheta"/>
-                <xs:enumeration value="Descent"/>
-                <xs:enumeration value="GradientSmooth"/>
                 <xs:enumeration value="Threshold"/>
                 <xs:enumeration value="Velocity"/>
                 <xs:enumeration value="Pressure"/>
@@ -1105,6 +1094,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1123,6 +1126,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="DESIGNSPACE"/>
           <xs:enumeration value="OBJECTIVE"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1168,6 +1172,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="MRT"/>
       <xs:element ref="DesignSpace"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

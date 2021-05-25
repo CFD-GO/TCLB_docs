@@ -6,8 +6,8 @@ d3q27_tePSM_per_Isothermal
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_tePSM_per_Isothermal/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d3q27_tePSM_per_Isothermal/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27_tePSM_per_Isothermal/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d3q27_tePSM_per_Isothermal/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -62,8 +62,10 @@ d3q27_tePSM_per_Isothermal
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|NWall, EWall, WWall, SWall, FWall, BWall, NPressure, EPressure, WPressure, SPressure, FPressure, BPressure, Solid, Wall|
 |COLLISION|BGK|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 
 ### [Solved fields](Fields)

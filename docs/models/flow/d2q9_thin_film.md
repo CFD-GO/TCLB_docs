@@ -6,8 +6,8 @@ d2q9_thin_film
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_thin_film/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_thin_film/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_thin_film/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_thin_film/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -58,8 +58,10 @@ d2q9_thin_film
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|EPressure, WPressure, NVelocity, SVelocity, WVelocity, EVelocity, NSymmetry, SSymmetry, Solid, Wall|
 |COLLISION|Cumulant, MRT|
+|NONE|None|
 |OBJECTIVE|Inlet, Outlet|
 |SETTINGZONE|DefaultZone|
 

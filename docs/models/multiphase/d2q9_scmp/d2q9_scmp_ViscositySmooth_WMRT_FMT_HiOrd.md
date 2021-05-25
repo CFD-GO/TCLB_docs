@@ -6,8 +6,8 @@ d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -90,7 +90,9 @@ d2q9_scmp_ViscositySmooth_WMRT_FMT_HiOrd
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BOUNDARY|NMovingWall, MovingWall, ESymmetry, NSymmetry, SSymmetry|
+|NONE|None|
 |OBJECTIVE|SolidBoundary1, SolidBoundary2, SolidBoundary3|
 |SETTINGZONE|DefaultZone|
 

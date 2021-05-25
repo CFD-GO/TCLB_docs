@@ -106,7 +106,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -132,7 +132,7 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL)(,(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|ALL))*"/>
+                <xs:pattern value="(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL)(,(Rho|T|C|Ct|Cl_eq|Solid|U|K|Theta|ADDITIONALS|BOUNDARY|COLLISION|OBJECTIVE|SETTINGZONE|NONE|ALL))*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -1154,6 +1154,20 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="None">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clear">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nodetypes"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="nodetypes">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="Box"/>
@@ -1174,6 +1188,7 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
           <xs:enumeration value="COLLISION"/>
           <xs:enumeration value="OBJECTIVE"/>
           <xs:enumeration value="SETTINGZONE"/>
+          <xs:enumeration value="NONE"/>
           <xs:enumeration value="ALL"/>
         </xs:restriction>
       </xs:simpleType>
@@ -1220,6 +1235,8 @@ Warning: Save and Load Memory Dump have to be used on the *same number of cores*
       <xs:element ref="MRT"/>
       <xs:element ref="Obj"/>
       <xs:element ref="DefaultZone"/>
+      <xs:element ref="None"/>
+      <xs:element ref="Clear"/>
     </xs:choice>
   </xs:complexType>
   <xs:complexType name="container">

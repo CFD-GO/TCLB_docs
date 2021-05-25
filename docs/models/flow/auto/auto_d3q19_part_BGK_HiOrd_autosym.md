@@ -6,8 +6,8 @@ auto_d3q19_part_BGK_HiOrd_autosym
 
 ## Details
 [Model description files](Model description) files for this model:
-[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/auto_d3q19_part_BGK_HiOrd_autosym/Dynamics.c.Rt)
-[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at 9e1ceb1)/src/auto_d3q19_part_BGK_HiOrd_autosym/Dynamics.R)
+[Dynamics.c](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/auto_d3q19_part_BGK_HiOrd_autosym/Dynamics.c.Rt)
+[Dynamics.R](https://github.com/llaniewski/TCLB/blob/(HEAD detached at fba1799)/src/auto_d3q19_part_BGK_HiOrd_autosym/Dynamics.R)
 
 ### [Zonal Settings](Settings)
 
@@ -57,9 +57,11 @@ auto_d3q19_part_BGK_HiOrd_autosym
 
 | Group | Types |
 | --- | --- |
+|ALL|Clear|
 |BODY|Body|
 |BOUNDARY|WVelocityTurbulent, NVelocity, SVelocity, NPressure, SPressure, EPressure, EVelocity, Wall, WPressure, WVelocity|
 |COLLISION|MRT|
+|NONE|None|
 |SETTINGZONE|DefaultZone|
 |SYMX|SymmetryX_plus, SymmetryX_minus|
 |SYMY|SymmetryY_plus, SymmetryY_minus|

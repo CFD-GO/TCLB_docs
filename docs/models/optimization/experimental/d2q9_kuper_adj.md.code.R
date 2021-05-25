@@ -30,7 +30,6 @@ linemark=function(...) {invisible(NULL)}
 
 ############# Parameters and settings ######
 
-ADJOINT=1
 MODEL="d2q9_kuper_adj"
 Options=list()
 add.include.dir("tools")
