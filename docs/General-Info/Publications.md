@@ -16,6 +16,7 @@ date: "2018"
 - [M. Dzikowski, L. Jasinski, M. Dabrowski, *Depth-averaged Lattice Boltzmann and Finite Element methods for single-phase flows in fractures with obstacles*, Computers & Mathematics with Applications, 2018](https://doi.org/10.1016/j.camwa.2018.02.010)
 - [G. Gruszczyński, T. Mitchell, C. Leonardi, Ł. Łaniewski-Wołłk, T. Barber, *A cascaded phase-field lattice Boltzmann model for the simulation of incompressible, immiscible fluids with high density contrast*, Computers & Mathematics with Applications, 2019](https://doi.org/10.1016/j.camwa.2019.08.018)
 - [M Rutkowski, W Gryglas, J Szumbarski, C Leonardi, Ł Łaniewski-Wołłk, *Open-loop optimal control of a flapping wing using an adjoint Lattice Boltzmann method*, Computers & Mathematics with Applications, 2020](https://doi.org/10.1016/j.camwa.2020.02.020)
+- [M Matyka, M Dzikowski, *Memory-efficient Lattice Boltzmann Method for low Reynolds number flows*, Computer Physics Communications, 2021](https://doi.org/10.1016/j.cpc.2021.108044)
 
 ## PhD Thesis:
 
