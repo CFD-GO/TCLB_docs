@@ -105,7 +105,11 @@ XIII Multiphase Workshop and Summer School, The Szewalski Institute of Fluid-Flo
 - L. O'Loughlin, *Direct Numerical Simulation of CO2 Sequestration at the Pore Scale* (supervisor: C. Leonardi)
 - B. Hill *Computational Modelling of Pulsatile Blood Flow* (supervisor: C. Leonardi)
 
-# Grants
+# Projects and Grants
+
+- ShaleSeq: Multidisciplinary project for carbon capture and storage analysis for Pomeranian shales
+
+- MapMoPS: Pre-Exascale project for particle simulations at the University of Queensland and POWSEY supercomputing center.
 
 - IDUB against COVID-19 "Modelling of epidemic spreading with Lattice Boltzmann Method"
 
@@ -113,12 +117,12 @@ XIII Multiphase Workshop and Summer School, The Szewalski Institute of Fluid-Flo
 
 ## Computing Power Grants
 
-### PL-GRID infrastrucure (PL)
+### PL-GRID infrastructure (PL)
 
 TCLB was actively developed and extended on the infrastructure of Cyfronet, in the grants: 
 `clb`, `clb2`, `clb3`, `clb2016`, `clb2017`, `clb2018`, `clb2019`, `clb2020`, `clb2021`.
 
-### ICM UW infrastrucure (PL)
+### ICM UW infrastructure (PL)
 
 TCLB was actively developed and extended on the infrastructure of Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw, in the grants: 
 `GR80-12`, `GR83-20`.
@@ -129,8 +133,8 @@ TCLB was developed and tuned for the Cray architecture as part of computing powe
 
 ### Pawsey Centre for Extreme Readiness (AU)
 
-TCLB was selected for development for extreme scale computing in the project *Massively parallel models of particle suspensions*.
+TCLB was selected for development for extreme-scale computing in the project *Massively parallel models of particle suspensions*.
 
 ### National Computational Infrastructure (AU)
 
-TCLB was heavily used on the infrastructure at NCI, in the grants: `aa83`, `cz84`.
+TCLB was heavily used on the infrastructure at National Computational Infrastructure (NCI), in the grants: `aa83`, `cz84`.
