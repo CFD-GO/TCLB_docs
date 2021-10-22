@@ -98,6 +98,7 @@ XIII Multiphase Workshop and Summer School, The Szewalski Institute of Fluid-Flo
 - R. Lenartowicz, *Influence of uncertainty of initial conditions in a flapping wing simulation* (promotor: Ł. Łaniewski-Wołłk)
 
 ### The University of Queensland
+
 - D. Lightbody, *Computational Modelling of Arterial Plaque Rupture using Coupled Lattice Boltzmann and Discrete Element Methods* (supervisor: C. Leonardi)
 - W. Martin, *Computational Modelling of Particle Straining in Porous Media* (supervisor: C. Leonardi)
 - R. Dendle, *Computational Modelling of Proppant Embedment \& Fracture Permeability in Queensland Coal Seams* (supervisor: C. Leonardi)
@@ -115,21 +116,21 @@ XIII Multiphase Workshop and Summer School, The Szewalski Institute of Fluid-Flo
 ### PL-GRID infrastrucure (PL)
 
 TCLB was actively developed and extended on the infrastructure of Cyfronet, in the grants: 
-`clb`, `clb2`, `clb3`, `clb2016`, `clb2017`, `clb2018`, `clb2019`, `clb2020`, `clb2021`,
+`clb`, `clb2`, `clb3`, `clb2016`, `clb2017`, `clb2018`, `clb2019`, `clb2020`, `clb2021`.
 
 ### ICM UW infrastrucure (PL)
 
 TCLB was actively developed and extended on the infrastructure of Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw, in the grants: 
-`GR80-12`, `GR83-20`
+`GR80-12`, `GR83-20`.
 
 ### PAWSEY infrastructure (AU)
 
 TCLB was developed and tuned for the Cray architecture as part of computing power grants awarded to the team of Christopher Leonardi (UQ).
 
 ### Pawsey Centre for Extreme Readiness (AU)
-TCLB was selected for development for extreme scale computing in the project *Massively parallel models of particle suspensions*
+
+TCLB was selected for development for extreme scale computing in the project *Massively parallel models of particle suspensions*.
 
 ### National Computational Infrastructure (AU)
-TCLB was heavily used on the infrastructure at NCI, in the grants: `aa83`, `cz84`
 
-
+TCLB was heavily used on the infrastructure at NCI, in the grants: `aa83`, `cz84`.

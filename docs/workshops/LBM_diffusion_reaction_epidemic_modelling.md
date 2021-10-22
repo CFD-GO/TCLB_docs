@@ -8,29 +8,52 @@ output: html_document
 The lattice Boltzmann method (LBM) is a widely used numerical scheme for solving both the Navier-Stokes
 equation (NSE) and advection-diﬀusion problems.
 Its popularity has signiﬁcantly risen in the recent three decades due to its ability to handle complex boundary shapes and its relative ease of implementation and parallelisation.
-Further to this, its mesoscopic formulation allows physics to be introduced at a lower level than for example a ﬁnite-volume or ﬁnite-element discretisation of the governing equations may allow.
+Furthermore, its mesoscopic formulation allows physics to be introduced at a lower level than, for example, a ﬁnite-volume or ﬁnite-element discretisation of the governing equations may allow.
 
-In this event we will show the state-of-the-art application of the LBM to the diffusion-reaction problems.
-During the workshop a system of equations describing dynamics of the epidemic will be solved using LBM.
+In this event, we will show the state-of-the-art application of the LBM to the diffusion-reaction problems.
+During the workshop, a system of equations describing the dynamics of the epidemic will be solved using LBM.
+
+<img src="../images/zaraza_0109.jpeg" alt="drawing" width="600"/>
+
+<style>
+.workshop_image {
+display: inline-block;
+width: 300px;
+/* max-width: 20%;
+max-height: 20%; */
+}
+</style>
+
+The generic model encapsulated in the TCLB environment can be compiled to solve different sets of advection-reaction-diffusion equations coupled with Navier-Stokes equations.
+Apart from forecasting the epidemic dynamics, the model can handle problems like phase change or rock dissolution.
+
+<div id="banner" style="overflow: hidden; display: inline-block;">
+    <div class="workshop_image">
+        <img src ="../images/c1.jpg">
+    </div>
+    <div class="workshop_image">
+        <img src ="../images/c8.jpg">
+    </div>
+</div>
 
 **Where:**
-Wrocław
+Wrocław / online
 
 **When:**
 25-26 XI 2021
 
-**Why:** To share knowneadge regarding Lattice Boltzmann Method and to better understand the dynamic of the epidemics.
+**Why:** To share knowledge regarding the Lattice Boltzmann Method and better understand the epidemics' dynamic.
 
 **Speakers:**
 M. Dzikowski, G. Gruszczynski
 
 **Target Audience:**
 The expected audience are university students and researchers from both academia and industry.
-No prior knownledge of Lattice Boltzmann Method or epidemic modelling is required.
+No prior knowledge of the Lattice Boltzmann Method or epidemic modelling is required.
 
 **Software/Hardware Requirements:**
-Bring your own laptop with recent web browser (workshop part).
-The materials will be hosted online using jupyter enviroment.
+Bring your own laptop with a recent web browser (workshop part).
+The materials will be hosted online using the jupyter environment.
 
 **Course Delivery:**
 The workshops will be held in polish.
@@ -39,15 +62,19 @@ The materials will be available online, in english.
 **Price:**
 Free.
 
-**Supported by:**
-Warsaw University of Technology
+**Funded by:**
+Warsaw University of Technology, IDUB against COVID-19
 
 **Open workshop:**
-The workshop is organized as a non-profit event.
-It is open for the interested general public.
+The workshop is organised as a non-profit event.
+It is open to the interested general public.
 
 **Registration:**
-Link to the registration form will appear `here`.
+Please contact us at:
+
+m.dzikowski([monkey](https://en.wikipedia.org/wiki/At_sign#Names_in_other_languages))icm.edu.pl
+
+ggruszczynski([monkey](https://en.wikipedia.org/wiki/At_sign#Names_in_other_languages))meil.pw.edu.pl
 
 ## Agenda
 
