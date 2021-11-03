@@ -82,10 +82,10 @@ ggruszczynski([monkey](https://en.wikipedia.org/wiki/At_sign#Names_in_other_lang
 
 | Time     | Topic                                                                             |
 -----------|-----------------------------------------------------------------------------------|
-| 13:00    | Introduction to the Lattice Boltzmann Method                                      |
-| 14:00    | LBM for reaction-diffusion equation                                               |
-| 15:00    | Reaction-diffusion: system of ODE                                                 |
-| 16:00    | Bring-Your-Own-Laptop: How to run TCLB                                            |
+| 14:00    | Introduction to the Lattice Boltzmann Method                                      |
+| 15:00    | LBM for reaction-diffusion equation                                               |
+| 16:00    | Reaction-diffusion: system of ODE                                                 |
+| 17:00    | Bring-Your-Own-Laptop: How to run TCLB                                            |
 | 18:00    | Social event :)
 
 ### Friday, 26 XI
