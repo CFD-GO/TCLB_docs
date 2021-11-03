@@ -37,15 +37,16 @@ Apart from forecasting the epidemic dynamics, the model can handle problems like
 </div>
 
 **Where:**
-Wrocław / online
+Uniwersytet Wrocławski, pl. Maxa Borna 9, 50-204 Wrocław, sala 119 (1 piętro)/Online
 
 **When:**
 25-26 XI 2021
 
-**Why:** To share knowledge regarding the Lattice Boltzmann Method and better understand the epidemics' dynamic.
+**Why:**
+To share knowledge regarding the Lattice Boltzmann Method and better understand the epidemics' dynamic.
 
 **Speakers:**
-M. Dzikowski, G. Gruszczynski
+M. Dzikowski, G. Gruszczyński
 
 **Target Audience:**
 The expected audience are university students and researchers from both academia and industry.
