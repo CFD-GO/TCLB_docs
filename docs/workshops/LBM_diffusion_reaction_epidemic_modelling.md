@@ -95,9 +95,9 @@ ggruszczynski([monkey](https://en.wikipedia.org/wiki/At_sign#Names_in_other_lang
 -----------|-----------------------------------------------------------------------------------|
 | 10:00    | Introduction to the SIR epidemiological model                                     |
 | 11:00    | Convolution, stability, FD solvers                                                |
-| 12:00    | Introduction to TCLB, simple flow model                                           |
-| 14:00    | Benchmarking the spatial-SIR epidemiological model                                |
-| 15:00    | Lunch break                                                                       |
-| 16:00    | Dockerized examples, HDF5                                                         |
-| 17:00    | R binding, Python binding                                                         |
+| 12:00    | Spatial SIR-like models                                                           |
+| 13:00    | Lunch break                                                                       |
+| 14:00    | Introduction to TCLB: Dockerized examples, HDF5, R binding                        |
+| 16:00    | TCLB for spatial SIR models, data pre-processing                                  |
+| 17:00    | TCLB - build your own model                                                       |
 | 18:00    | End of workshop                                                                   |
