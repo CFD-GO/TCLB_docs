@@ -87,7 +87,7 @@ communicate single vel yes
 processors  1 1 1
 ```
 
-Setting the `units` command to `cgs` defines the DEM units for length-mass-time to be in centimetres-grams-seconds (refer to [units documentation](https://www.cfdem.com/media/DEM/docu/units.html) for full details). This is required in simulations of micron-sized particles (which is very frequent!) in order to keep the time step small and maintian computation precision, among other things. 
+Setting the `units` command to `cgs` defines the DEM units for length-mass-time to be in centimetres-grams-seconds (refer to [units documentation](https://www.cfdem.com/media/DEM/docu/units.html) for full details). This is required in simulations of micron-sized particles (which is very frequent!) in order to keep the time step small and maintain the computation precision, among other things. 
 
 `boundary` `p p f` makes the DEM simulation periodic in the x and y directions and non-periodic ('fixed') in the z direction.
 
@@ -106,7 +106,7 @@ neigh_modify    delay 0
 
 If particles are within the skin distance (`0.8e-4` here), they will be stored as neighbours. The skin distance is particularly important for particles of multiple sizes, and must be greater than `d_lrg - r_lrg - r_sml` (diameter of largest particle, radius of largest particle, radius of smallest particle) to ensure that particle contacts are correctly captured. Setting `neigh_modify` to `delay 0` rebuilds the neighbour list every step, and is generally okay for performance.
 
-Next we define the simulation domain
+Next we define the simulation domain:
 
 ```bash
 # Declare domain
@@ -159,7 +159,7 @@ pair_style  gran model hertz tangential history
 pair_coeff  * *
 ```
 
-for which the material properties defined earlier effectively define the elastic and damping coefficients (refer to the [Hertz model documentation](https://www.cfdem.com/media/DEM/docu/gran_model_hertz.html) for full details). The `tangential history` option switches the calculation of tangential forces on, which emulates friction. `pair_coeff  * *` simply states that the Hertz contant model should be appled to the interactions of all types, however this can be modified if desired.
+With this model, the material properties defined earlier effectively define the elastic and damping coefficients (refer to the [Hertz model documentation](https://www.cfdem.com/media/DEM/docu/gran_model_hertz.html) for full details). The `tangential history` option switches the calculation of tangential forces on, which emulates friction. `pair_coeff  * *` simply states that the Hertz contant model should be appled to the interactions of all types, however this can be modified if desired.
 
 Planar walls are simply defined with:
 
@@ -169,7 +169,7 @@ fix wall1 all wall/gran model hertz tangential history primitive type 1 zplane 0
 fix wall2 all wall/gran model hertz tangential history primitive type 1 zplane 100.5e-4
 ```
 
-where the contact model should match the one defined earlier. Here we place the DEM walls at one LBM lattice spacing within the domain, so that they line up with the bounce-back boundaries in the LBM simulation.
+Here the contact model should match the one defined earlier. In this case, we place the DEM walls at one LBM lattice spacing within the domain, so that they line up with the bounce-back boundaries in the LBM simulation.
 
 We then define the integration, timestep and coupling to TCLB:
 
@@ -190,7 +190,7 @@ dump    dmp all custom 1000 output/particles_in_channel/particles_* id type x y 
 run 100000 upto
 ```
 
-If desired numerous different run commands can be used to do things like modify fixes and commands at different points in a simulation.
+If desired, numerous different run commands exist and can be used to perform various tasks, for example, modify fixed flags and commands at certain points during a simulation.
 
 
 
@@ -205,7 +205,7 @@ First create an input script called `channel-particles.xml`. After declaring the
 <CLBConfig version="2.0" output="output/particles_in_channel/">
 ```
 
-we will make use of the units feature so that real-world units agree with the LBM units, which makes coupling to the LIGGGHTS simulation a bit more straightforward and intuitive:
+For convenience of aligning the DEM and LBM simulations, we will make use of the units feature. This allows us to work in physical (as opposed to lattice) units and makes coupling to the LIGGGHTS simulation a bit more straightforward and intuitive:
 
 ```xml
     <Units>
@@ -215,7 +215,7 @@ we will make use of the units feature so that real-world units agree with the LB
     </Units>
 ```
 
-In this way we can interpret `m` as representing `cm` and `kg/m3` as representing `g/cm3`, to align with the DEM units (the size of one LB cell is therefore equal to `0.5e-4 cm`, one time step is equal to `4.167e-8 s`, and the fluid density is `1 g/cm3`). With a relaxation rate of 1, this physical lattice spacing and time step equates to a physical kinematic viscosity of `0.01 cm2/s`, equivalent to that of water. 
+In this way we can interpret `m` as representing `cm` and `kg/m3` as representing `g/cm3`, to align with the DEM units (the size of one LB cell is therefore equal to `0.5e-4 cm`, one time step is equal to `4.167e-8 s`, and the fluid density is `1 g/cm3`). With a relaxation rate of 1, this physical lattice spacing and time step equates to a physical kinematic viscosity of `0.01 cm2/s`, equivalent to that of water. The parameters here create quite an involved scenario that would require approximately 30-45 minutes to compute on a good GPU. If you are simply running this as a tutorial to practice, and don't want to wait this long to obtain some Colourful Fluid Dynamics, set the spatial gauge to 0.25 and the temporal gauge to 0.0625. This will should keep the relaxation time constant.
 
 Next we define the simulation domain and the bounding walls:
 
@@ -275,7 +275,7 @@ Then to run, navigate to the directory containing the output text files, and exe
 python2 /opt/LPP/lpp particles_* --chunksize 1 --cpunum 4
 ```
 
-Loading the resulting .vtk files into paraview and selecting the appropriate glyph and colouring by velocity, the result should look like this:
+This command can be run during the simulation to inspect intermediate results. Loading the resulting .vtk files into paraview and selecting the appropriate glyph and colouring by velocity, the result should look like the image below. Note, that when you create the glyph element, you need to select it to be a sphere, set the Radius to 1 and the scale on the radius to be 1. 
 
 ![Channel video](channel_particles.png)
 
