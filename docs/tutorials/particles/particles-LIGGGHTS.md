@@ -271,13 +271,16 @@ sudo mkdir /opt/LPP/
 sudo ./install.sh -p /opt/LPP/
 ```
 
+!!! note
+    Pizza.py must be run using Python2 and also requires numpy, so ensure that Python2 is installed on your machine and that numpy is also installed for Python2. 
+    
 Then to run, navigate to the directory containing the output text files, and execute:
 
 ```bash
 python2 /opt/LPP/lpp particles_* --chunksize 1 --cpunum 4
 ```
 
-This command can be run during the simulation to inspect intermediate results. Loading the resulting .vtk files into paraview and selecting the appropriate glyph and colouring by velocity, the result should look like the image below. Note, that when you create the glyph element, you need to select it to be a sphere, set the Radius to 1 and the scale on the radius to be 1. 
+This command can be run during the simulation to inspect intermediate results. Loading the resulting .vtk files into paraview and selecting the appropriate glyph and colouring by velocity, the result should look like the image below. Note, that when you create the glyph element, you need to select it to be a sphere, set the Radius to 1 and the scale on the radius to be 1. Also ensure that you change the Glyph Mode from `Uniform spatial distribution` to `All points`.
 
 ![Channel video](channel_particles.png)
 
