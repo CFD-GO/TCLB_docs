@@ -26,7 +26,6 @@ date: "2018"
 - [M. Matyka, M. Dzikowski, *Memory-efficient Lattice Boltzmann Method for low Reynolds number flows*, Computer Physics Communications, 2021-10-01](https://doi.org/10.1016/j.cpc.2021.108044)
 - [N.J. Di Vaira, L. Łaniewski-Wołłk, R.L. Johnson, S.M. Aminossadati, C.R. Leonardi, *Influence of particle polydispersity on bulk migration and size segregation in channel flows*, Journal of Fluid Mechanics, 2022-05-25](https://doi.org/10.1017/jfm.2022.166)
 - [G. Gruszczyński, Ł. Łaniewski-Wołłk, *A comparative study of 3D cumulant and central moments lattice Boltzmann schemes with interpolated boundary conditions for the simulation of thermal flows in high Prandtl number regime*, International Journal of Heat and Mass Transfer, 2022-11-15](https://doi.org/10.1016/j.ijheatmasstransfer.2022.123259)
-- [C. Schwarzmeier, M. Holzer, T. Mitchell, M. Lehmann, F. Häusl, U. Rüde, *Comparison of free-surface and conservative Allen–Cahn phase-field lattice Boltzmann method*, Journal of Computational Physics, 2023-01-15](https://doi.org/10.1016/j.jcp.2022.111753)
 - [T.R. Mitchell, A. Roslin, Ł. Łaniewski-Wołłk, I. Onederra, C.R. Leonardi, *Quantifying the Permeability Enhancement from Blast-Induced Microfractures in Porphyry Rocks Using a Cumulant Lattice Boltzmann Method*, Transport in Porous Media, 2023-02-01](https://doi.org/10.1007/s11242-022-01875-4)
 
 ## Conferences
